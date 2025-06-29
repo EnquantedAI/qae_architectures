@@ -11,4 +11,10 @@
 
 ### Folders
 *We'll need some common utilities, I suggest to keep them as .py files in a directory.*
-- utils: which is a collection of Python files and testing notebooks to manage QAEs, plots and quantum circuits
+- jacobs_examples: examples of QAE and supporting code from Jacob
+- logs: this folder may be created to hold saved data, training history, plots, etc.
+- qae_utils: which is a collection of Python utilities to include
+  - Charts.py - functions plotting time-series data (fancy and flexible)
+  - Files.py - functions saving time-series and support data to disk
+  - Tools.py - some odd collection of utilities, including extras for PennyLane
+  - Window.py - functions creating and managing sliding windows (making, splitting, etc.)
