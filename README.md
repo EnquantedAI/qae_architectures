@@ -1,4 +1,4 @@
-## QAE Architectures in PennyLane+PyTorch
+## Time Series QAE Architectures in PennyLane+PyTorch
 
 ### Aims
 *Investigation of quantum autoencoder architectures for effective denoising of signal and time series.*
@@ -11,7 +11,14 @@
 
 ### Folders
 *We'll need some common utilities, I suggest to keep them as .py files in a directory.*
-- jacobs_examples: examples of QAE and supporting code from Jacob
+- jacobs_examples: examples of QAEs and supporting code from Jacob<br>
+  Most important files, with XX - workflow sequence number, N_nn - version number, NOTE - explaining note (such as data used and the model type):
+  - ts_pl_about_and_versions.ipynb: Project overview, references and history of changes (issues/fixes)
+  - ts_pl_XX_vN_nn_data_NOTE.ipynb: Creates and saves a TS data set (mackey_glass/sine/beer, etc.)
+  - ts_pl_XX_vN_nn_train_NOTE.ipynb: Trains a TS QAE model and saves history (cost, parameters)
+  - ts_pl_XX_vN_nn_analysis_NOTE.ipynb: Analyses and saves TS QAE training stats (MAE/MSE/R2 for train/test)
+  - ts_pl_XX_vN_nn_charts_NOTE.ipynb: Plots and saves variety of TS QAE charts
+  - ts_pl_XX_vN_nn_reports_NOTE.ipynb: Generates TS QAE reports in the format ready for publication
 - logs: this folder may be created to hold saved data, training history, plots, etc.
 - qae_utils: which is a collection of Python utilities to include
   - Charts.py - functions plotting time-series data (fancy and flexible)
