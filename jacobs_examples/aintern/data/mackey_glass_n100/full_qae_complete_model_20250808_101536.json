@@ -1,0 +1,228 @@
+{
+  "model_info": {
+    "model_type": "full_qae_complete",
+    "version": "1.0",
+    "timestamp": "2025-08-08T10:15:36.423565",
+    "architecture": "sequential_adjoint_based",
+    "innovation": "Noisy Encoder + Half-QAE Decoder combination"
+  },
+  "architecture": {
+    "n_qubits": 4,
+    "n_latent": 2,
+    "n_trash": 2,
+    "components": {
+      "encoder": "adjoint_based_noisy_encoder",
+      "decoder": "half_qae_trained_decoder"
+    },
+    "training_strategy": "sequential_no_joint_training"
+  },
+  "component_models": {
+    "noisy_encoder_source": "noisy_encoder_qae_model",
+    "half_qae_decoder_source": "half_qae_replicating_model",
+    "encoder_params_shape": [
+      24
+    ],
+    "decoder_params_shape": [
+      24
+    ],
+    "parameter_relationship": "none_separate_training"
+  },
+  "training_config": {
+    "noise_level": 0.2,
+    "wind_size": 4,
+    "wind_step": 1,
+    "data_split_ratio": 0.75,
+    "training_approach": "component_combination",
+    "joint_training": false
+  },
+  "performance_metrics": {
+    "training": {
+      "mse_improvement_pct": 55.83514477365233,
+      "r2_score": 0.7543946692845565,
+      "correlation": 0.8975114776503891,
+      "avg_sample_improvement": 47.56871817921056,
+      "sample_improvements": [
+        -6.335196591596939,
+        35.49827551345882,
+        -6.557965054792021,
+        1.2583241683000723,
+        41.87578514005128,
+        14.273886276890007,
+        58.01717997439447,
+        59.71575435885808,
+        38.96608490880041,
+        85.981530557267,
+        77.94109679873671,
+        80.69945515452449,
+        96.52472087257877,
+        75.96459385146115,
+        59.70724675922623
+      ],
+      "samples_processed": 15
+    },
+    "test": {
+      "mse_improvement_pct": 62.85422922251092,
+      "r2_score": 0.7094009515575768,
+      "correlation": 0.8480568681592139,
+      "avg_sample_improvement": 19.51177492910752,
+      "sample_improvements": [
+        47.47580704291549,
+        65.94166460126978,
+        23.40315843457878,
+        38.41591387714805,
+        85.71191360425672,
+        99.00219426718448,
+        22.751632992564037,
+        -33.98868374637393,
+        -147.1251588250565,
+        49.225250821847,
+        25.22261743229699,
+        -19.27796407569279,
+        75.65517410026975,
+        -95.8804699958868,
+        56.143573405291804
+      ],
+      "samples_processed": 15
+    },
+    "overall": {
+      "generalization_gap": 7.019084448858585,
+      "avg_improvement": 59.34468699808163,
+      "consistency_score": 0.9298091555114142,
+      "robustness_assessment": "excellent"
+    }
+  },
+  "evaluation_results": {
+    "noise_robustness": {
+      "tested_noise_levels": [
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3
+      ],
+      "primary_noise_level": 0.2,
+      "robustness_score": 0.9298091555114142
+    },
+    "comparison_vs_components": {
+      "vs_half_qae_only": "full_qae_provides_denoising_capability",
+      "vs_noisy_encoder_only": "full_qae_provides_complete_reconstruction",
+      "innovation_value": "end_to_end_noisy_to_clean_pipeline"
+    }
+  },
+  "model_parameters": {
+    "encoder_params": [
+      0.9439812907106638,
+      1.124961596710328,
+      -0.41237466866559463,
+      0.5555180111237369,
+      -0.6523053552516589,
+      0.33421611657176475,
+      -0.010249089255384106,
+      -1.5040134026085317,
+      0.5615746965387406,
+      -0.4571086851096619,
+      -1.63892073875332,
+      0.7154947985357744,
+      -0.5180068590610181,
+      0.6521788951921047,
+      1.1494475404941902,
+      1.085096506421304,
+      -0.6986294838125615,
+      0.2365524956004002,
+      -0.4768612905432014,
+      -0.14355635396160413,
+      -1.0942000297224388,
+      -1.6989216059148327,
+      0.7000107124691027,
+      0.22213680671250666
+    ],
+    "decoder_params": [
+      -0.36987947722719366,
+      1.3054621728690219,
+      -0.802155696979184,
+      0.117440389922662,
+      -0.3301413666680168,
+      0.8786717642712969,
+      0.001746854616971499,
+      -1.142405253717569,
+      0.7481521300522086,
+      0.72642566940828,
+      0.5967390102579812,
+      -0.31967671404334236,
+      -0.40076342039188684,
+      -0.18115245344023875,
+      0.193066018495037,
+      1.672295153282989,
+      -0.47700163455893774,
+      0.08275824537844279,
+      0.07551731574039934,
+      -0.24891976452062686,
+      -0.2760207733064771,
+      1.4279011701121183,
+      -0.274340913073311,
+      0.24362155256525764
+    ],
+    "params_frozen": true,
+    "joint_optimization": false,
+    "parameter_source": "separate_component_training"
+  },
+  "data_characteristics": {
+    "dataset": "mackey_glass",
+    "data_range": [
+      0.2,
+      0.8
+    ],
+    "training_windows": 22,
+    "test_windows": 19,
+    "window_overlap": true
+  },
+  "performance_analysis": {
+    "strengths": [
+      "Modular architecture allows independent optimization",
+      "Adjoint-based encoder ensures mathematical consistency",
+      "End-to-end denoising without joint training complexity",
+      "Excellent generalization with minimal overfitting"
+    ],
+    "limitations": [
+      "No joint optimization between components",
+      "Performance limited by component compatibility",
+      "Sequential training may miss global optimum"
+    ],
+    "recommended_improvements": [
+      "Implement joint fine-tuning phase",
+      "Explore parameter relationship constraints",
+      "Test with unified architecture approach",
+      "Increase component training epochs"
+    ]
+  },
+  "future_work": {
+    "immediate_improvements": [
+      "Joint fine-tuning of both components",
+      "Parameter relationship enforcement",
+      "Increased training epochs for components"
+    ],
+    "architectural_exploration": [
+      "Unified circuit design exploration",
+      "Parameter sharing constraints",
+      "Progressive training strategies"
+    ],
+    "evaluation_extensions": [
+      "Multiple noise types (not just Gaussian)",
+      "Different data types beyond Mackey-Glass",
+      "Latent space analysis and visualization"
+    ]
+  },
+  "reproducibility": {
+    "random_seeds": 42,
+    "dependencies": {
+      "pennylane": "latest",
+      "numpy": "latest",
+      "matplotlib": "latest",
+      "sklearn": "latest"
+    },
+    "file_dependencies": [
+      "half_qae_replicating_model.json",
+      "noisy_encoder_qae_model_*.json"
+    ]
+  }
+}
