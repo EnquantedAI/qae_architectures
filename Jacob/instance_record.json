@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "run_id": "run_1756225277",
+    "timestamp": "2025-08-26 18:21:17",
+    "dataset_id": "unknown",
+    "window": {
+      "size": null,
+      "stride": null
+    },
+    "scaling": {
+      "low": 0.2,
+      "high": 0.8
+    },
+    "noise_sigma_train": NaN,
+    "noise_sigma_eval": 0.1,
+    "splits": {
+      "n_train": 57,
+      "n_val": 20,
+      "n_test": 20
+    },
+    "seed": -1
+  },
+  "architecture": {
+    "n_qubits_total": 4,
+    "n_latent": 2,
+    "n_trash": 2,
+    "latent_wires": [
+      0,
+      1
+    ],
+    "trash_wires": [
+      2,
+      3
+    ],
+    "n_layers": 3,
+    "param_counts": {
+      "phi": -1,
+      "psi": -1
+    },
+    "param_fingerprint": "10de1df21c5cb1745ed3d983a0f8a3f0b5f66456dc35487d31a84e4ba075031b"
+  },
+  "training_setup": {
+    "optimizer": "adam",
+    "init_lr": 0.003,
+    "lr_schedule": "plateau/halving",
+    "batch_size": 0,
+    "weight_decay": 0.0,
+    "max_epochs": 0,
+    "patience": 0
+  },
+  "training_outcome": {
+    "best_epoch": -1,
+    "early_stopped": true,
+    "val_mse_values_best": NaN
+  },
+  "metrics": {
+    "train": {
+      "values": {
+        "noisy_MSE_mean": 0.0028919166441870314,
+        "deno_MSE_mean": 0.0025681034787545793,
+        "delta_MSE_pct_pooled": 11.197181844204975,
+        "delta_MSE_pct_mean_per_window": -0.6066184245657331,
+        "delta_MSE_pct_CI95_per_window": [
+          -18.716560359194652,
+          14.466377134976105
+        ],
+        "delta_MSE_pct_symmetric_mean": 11.1777926525213,
+        "delta_MSE_pct_symmetric_CI95": [
+          -1.894082797203661,
+          22.93573642226524
+        ],
+        "sign_test": {
+          "wins": 36,
+          "losses": 21,
+          "ties": 0,
+          "p_value": 0.0627366803558285
+        },
+        "noisy_MSE_std": 0.0018468911727753357,
+        "deno_MSE_std": 0.0016421036606821874
+      },
+      "Z": {
+        "noisy_MSE_mean": 0.011047596703506466,
+        "deno_MSE_mean": 0.00991344068432955,
+        "delta_MSE_pct_pooled": 10.266088178408422,
+        "delta_MSE_pct_mean_per_window": -16.49099176570478,
+        "delta_MSE_pct_CI95_per_window": [
+          -36.71610738759907,
+          2.0855381369589234
+        ],
+        "delta_MSE_pct_symmetric_mean": 3.487307383344002,
+        "delta_MSE_pct_symmetric_CI95": [
+          -13.897038495181505,
+          21.794286305285304
+        ],
+        "sign_test": {
+          "wins": 28,
+          "losses": 29,
+          "ties": 0,
+          "p_value": 1.0
+        },
+        "noisy_MSE_std": 0.012495591997584139,
+        "deno_MSE_std": 0.011949677317053516
+      }
+    },
+    "val": {
+      "values": {
+        "noisy_MSE_mean": 0.004587445744077151,
+        "deno_MSE_mean": 0.0038795534093546483,
+        "delta_MSE_pct_pooled": 15.431078081663689,
+        "delta_MSE_pct_mean_per_window": 12.61632447348681,
+        "delta_MSE_pct_CI95_per_window": [
+          4.582966089041657,
+          21.282352413601984
+        ],
+        "delta_MSE_pct_symmetric_mean": 16.65493852629349,
+        "delta_MSE_pct_symmetric_CI95": [
+          6.0548192920895545,
+          28.717862960221062
+        ],
+        "sign_test": {
+          "wins": 16,
+          "losses": 4,
+          "ties": 0,
+          "p_value": 0.01181793212890625
+        },
+        "noisy_MSE_std": 0.0035293722622164177,
+        "deno_MSE_std": 0.0029482151088253976
+      },
+      "Z": {
+        "noisy_MSE_mean": 0.010617283866834502,
+        "deno_MSE_mean": 0.010802781706528571,
+        "delta_MSE_pct_pooled": -1.747130829510115,
+        "delta_MSE_pct_mean_per_window": -28.89396384569568,
+        "delta_MSE_pct_CI95_per_window": [
+          -67.10628981997431,
+          5.329800416042593
+        ],
+        "delta_MSE_pct_symmetric_mean": -5.025970881037769,
+        "delta_MSE_pct_symmetric_CI95": [
+          -32.19773583172053,
+          24.145981537119546
+        ],
+        "sign_test": {
+          "wins": 8,
+          "losses": 12,
+          "ties": 0,
+          "p_value": 0.5034446716308594
+        },
+        "noisy_MSE_std": 0.0116301309612027,
+        "deno_MSE_std": 0.011705487300840412
+      }
+    },
+    "test": {
+      "values": {
+        "noisy_MSE_mean": 0.0029415057740936187,
+        "deno_MSE_mean": 0.0026243123257273255,
+        "delta_MSE_pct_pooled": 10.783369903940835,
+        "delta_MSE_pct_mean_per_window": 1.862157043282678,
+        "delta_MSE_pct_CI95_per_window": [
+          -16.401455162043582,
+          18.258934066311127
+        ],
+        "delta_MSE_pct_symmetric_mean": 4.135838208250137,
+        "delta_MSE_pct_symmetric_CI95": [
+          -17.297408709069796,
+          23.269462050509368
+        ],
+        "sign_test": {
+          "wins": 15,
+          "losses": 5,
+          "ties": 0,
+          "p_value": 0.04138946533203125
+        },
+        "noisy_MSE_std": 0.001947201323830652,
+        "deno_MSE_std": 0.0016459087025304134
+      },
+      "Z": {
+        "noisy_MSE_mean": 0.009112186976925783,
+        "deno_MSE_mean": 0.010261421810568844,
+        "delta_MSE_pct_pooled": -12.612063783954353,
+        "delta_MSE_pct_mean_per_window": -33.23023741725368,
+        "delta_MSE_pct_CI95_per_window": [
+          -61.12176994886196,
+          -8.939139836814002
+        ],
+        "delta_MSE_pct_symmetric_mean": -15.565604810644237,
+        "delta_MSE_pct_symmetric_CI95": [
+          -40.39452217808513,
+          7.633906928427585
+        ],
+        "sign_test": {
+          "wins": 9,
+          "losses": 11,
+          "ties": 0,
+          "p_value": 0.8238029479980469
+        },
+        "noisy_MSE_std": 0.010174541800728885,
+        "deno_MSE_std": 0.009787447877438928
+      }
+    }
+  },
+  "robustness_val": [
+    {
+      "sigma": 0.05,
+      "values_delta_pct_pooled": -15.344057497278234,
+      "values_delta_pct_mean_per_window": -33.56832554358535,
+      "values_delta_pct_CI95_per_window": [
+        -72.51511960296288,
+        -1.0913548337408525
+      ],
+      "values_delta_pct_symmetric_mean": -11.818453267020057,
+      "values_delta_pct_symmetric_CI95": [
+        -35.29998702905664,
+        10.8383372051177
+      ],
+      "Z_delta_pct_mean_per_window": -52.84737820029255,
+      "Z_delta_pct_CI95_per_window": [
+        -144.37366876705204,
+        21.04092445235421
+      ],
+      "Z_delta_pct_symmetric_mean": 19.001070029913997,
+      "Z_delta_pct_symmetric_CI95": [
+        -23.42460134181141,
+        60.28440657155811
+      ],
+      "denom_floor_vals": 0.00020977522861256393,
+      "denom_floor_Z": 0.00020977522861256393
+    },
+    {
+      "sigma": 0.075,
+      "values_delta_pct_pooled": 1.0069408929432526,
+      "values_delta_pct_mean_per_window": -13.420072126564225,
+      "values_delta_pct_CI95_per_window": [
+        -60.1396695386634,
+        19.210277524968294
+      ],
+      "values_delta_pct_symmetric_mean": 10.624331517690843,
+      "values_delta_pct_symmetric_CI95": [
+        -15.565041361613988,
+        35.73592610246258
+      ],
+      "Z_delta_pct_mean_per_window": -29.75721850920427,
+      "Z_delta_pct_CI95_per_window": [
+        -65.79185085653343,
+        3.8892506515460115
+      ],
+      "Z_delta_pct_symmetric_mean": -8.370067253661613,
+      "Z_delta_pct_symmetric_CI95": [
+        -40.834001034435296,
+        24.418299632394575
+      ],
+      "denom_floor_vals": 0.0005490790350840262,
+      "denom_floor_Z": 0.0005490790350840262
+    },
+    {
+      "sigma": 0.1,
+      "values_delta_pct_pooled": 17.81958873521034,
+      "values_delta_pct_mean_per_window": 9.714265326427663,
+      "values_delta_pct_CI95_per_window": [
+        -2.028845535740517,
+        21.18793928928647
+      ],
+      "values_delta_pct_symmetric_mean": 15.079182859704066,
+      "values_delta_pct_symmetric_CI95": [
+        0.8927919488496681,
+        29.483086708388658
+      ],
+      "Z_delta_pct_mean_per_window": 5.263236109783989,
+      "Z_delta_pct_CI95_per_window": [
+        -24.973851396211593,
+        28.929934681837654
+      ],
+      "Z_delta_pct_symmetric_mean": 23.403469649481984,
+      "Z_delta_pct_symmetric_CI95": [
+        -1.6112110352664826,
+        48.492865966639854
+      ],
+      "denom_floor_vals": 0.0015189178811367012,
+      "denom_floor_Z": 0.0015189178811367012
+    }
+  ],
+  "diagnostics": {
+    "aligned_vs_misaligned_values_MSE": {
+      "aligned_values_MSE": NaN,
+      "misaligned_values_MSE": NaN
+    },
+    "corr_P00_vs_MSE_val": NaN,
+    "latent_consistency": NaN,
+    "residual_noise_corr": NaN
+  },
+  "artifacts": {
+    "model_bundle_json": null,
+    "instance_record_json": "./instance_record.json"
+  }
+}
