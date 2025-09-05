@@ -1,0 +1,1 @@
+{"major_version": 6, "minor_version": 0, "data_id": "mackey_glass_n300_w4_s1_1753357083", "samples": 300, "train_size": 225, "test_size": 75, "scale_low": 0.05, "scale_high": 3.0915926535897933, "scale_margin": 0.05, "wind_size": 4, "wind_step": 1, "noise_levels": [0.05, 0.1, 0.15], "base_noise": 0.1, "actual_noise": 0.016366301534244128, "timestamp": 1753357083}

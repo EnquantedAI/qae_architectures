@@ -1,0 +1,59 @@
+================================================================================
+🚀 UNIVERSAL QAE MODEL COMPARISON REPORT
+================================================================================
+Generated: 2025-08-13 13:05:58
+Framework: Universal QAE Comparison Framework v1.0
+
+📊 ANALYSIS OVERVIEW
+----------------------------------------
+Models analyzed: 2
+Datasets tested: 1
+Total comparisons: 2
+
+📈 DATASET: TRAINING_MATCH
+--------------------------------------------------
+🏆 RANKING:
+   1. Jacob_FullQAE_Aug03
+      • Average improvement: 29.6%
+      • Success rate: 84.8%
+      • Architecture: Jacob_Full_QAE_Adjoint
+      • Latent vs Trash: 3.7% vs -183.7%
+
+   2. Jacob_FullQAE_Aug08
+      • Average improvement: 28.9%
+      • Success rate: 85.6%
+      • Architecture: Jacob_Full_QAE_Adjoint
+      • Latent vs Trash: 21.3% vs 27.8%
+
+📊 STATISTICAL SIGNIFICANCE:
+   Jacob_FullQAE_Aug03 vs Jacob_FullQAE_Aug08:
+     • Noise 0.1: NOT SIGNIFICANT (p=0.6276)
+       Better: Jacob_FullQAE_Aug03, Effect: small
+     • Noise 0.15: NOT SIGNIFICANT (p=0.7124)
+       Better: Jacob_FullQAE_Aug03, Effect: small
+     • Noise 0.2: NOT SIGNIFICANT (p=0.0743)
+       Better: Jacob_FullQAE_Aug08, Effect: small
+     • Noise 0.25: NOT SIGNIFICANT (p=0.4609)
+       Better: Jacob_FullQAE_Aug08, Effect: small
+     • Noise 0.3: NOT SIGNIFICANT (p=0.4971)
+       Better: Jacob_FullQAE_Aug03, Effect: small
+
+--------------------------------------------------
+
+🎯 OVERALL CONCLUSIONS
+----------------------------------------
+🏆 OVERALL CHAMPION:
+   Jacob_FullQAE_Aug03
+   • Average improvement across all datasets: 29.6%
+   • Average success rate: 84.8%
+
+💡 RECOMMENDATIONS:
+   1. Use Jacob_FullQAE_Aug03 for production deployment
+   2. Study Jacob_FullQAE_Aug03's architecture for insights
+   3. Consider ensemble approach with Jacob_FullQAE_Aug08
+   4. Focus improvement efforts on weaker models
+   5. Test on additional datasets for validation
+
+================================================================================
+End of Report
+================================================================================
