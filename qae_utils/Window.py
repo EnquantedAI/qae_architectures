@@ -7,24 +7,43 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pylab
 import math
+import time
 from typing import Union
 from IPython.display import clear_output
 
 
 ##### Generate and calculate noise in TS
 
+def rand_seed():
+    t=time.time(); t = int((t-int(t))*10000)
+    return t
+
 ### Add absolute noise to TS
 #   X_ts: TS X axis
 #   y_ts: TS y axis
 #   noise: Maximum +/- noise level 
-def ts_add_noise(vec, noise=0.0):
+#   noise_type: uniform / normal
+#   range_low, range_high: range of noise values
+#   clip: True / False, if noise should be clipped to its range
+#   seed: random seed
+def ts_add_noise(vec, noise=0.0, noise_type='uniform', 
+                 range_low=None, range_high=None, clip=False, seed=None):
+    if range_low is None: range_low = np.min(vec)
+    if range_high is None: range_high = np.max(vec)
+    if seed is None: seed = rand_seed()
+    
     if noise == 0:
         return vec
     else:
-        rng = np.random.default_rng()
-        noise_vec = np.random.uniform(-1, 1, len(vec))*noise
-        noise_vec = [y+e for (y, e) in zip(vec, noise_vec)]
-        return np.array(noise_vec)
+        rng = np.random.default_rng(int(seed))
+        if noise_type == 'uniform':
+            noise_vec = rng.uniform(-1, 1, len(vec))
+        elif noise_type == 'normal':
+            noise_vec = rng.normal(-1, 1, len(vec))
+        vec_with_noise = vec + noise_vec*noise
+        if clip:
+            vec_with_noise = np.clip(vec_with_noise, range_low, range_high)
+        return vec_with_noise
 
 ### Calculates the total noise as a percentage of value range
 #   windows_org: Original windows
