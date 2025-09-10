@@ -35,7 +35,10 @@ def ts_add_noise(vec, noise=0.0, noise_type='uniform',
     if noise == 0:
         return vec
     else:
-        rng = np.random.default_rng(int(seed))
+        if seed != 0:
+            rng = np.random.default_rng(int(seed))
+        else:
+            rng = np.random.default_rng()
         if noise_type == 'uniform':
             noise_vec = rng.uniform(-1, 1, len(vec))
         elif noise_type == 'normal':
