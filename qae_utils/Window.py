@@ -35,14 +35,14 @@ def ts_add_noise(vec, noise=0.0, noise_type='uniform',
     if noise == 0:
         return vec
     else:
-        rng = np.random.default_rng()
+        rng = np.random.default_rng(seed=seed)
         if noise_type == 'uniform':
             noise_vec = rng.uniform(-1, 1, len(vec))
         elif noise_type == 'normal':
-            noise_vec = rng.normal(-1, 1, len(vec))
+            noise_vec = rng.normal(0, 1, len(vec))
         else:
             noise_vec = np.zeros(len(vec))
-        vec_with_noise = vec + noise_vec*noise
+        vec_with_noise = vec + noise_vec*noise*(range_high-range_low)
         if clip:
             vec_with_noise = np.clip(vec_with_noise, range_low, range_high)
         return vec_with_noise
