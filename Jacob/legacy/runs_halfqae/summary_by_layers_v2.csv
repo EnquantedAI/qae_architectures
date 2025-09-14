@@ -1,0 +1,3 @@
+n_layers,runs,noisy_baseline_mse (mean±std),best_val_mse (mean±std),final_val_mse (mean±std),best_delta_pct (mean±std),final_delta_pct (mean±std),s1_best_val (mean±std)
+1,5,0.013847 ± 0.000000,0.009770 ± 0.000083,0.009856 ± 0.000077,29.438723 ± 0.600913,28.821636 ± 0.555506,0.268295 ± 0.004261
+3,5,0.013847 ± 0.000000,0.009469 ± 0.000389,0.009558 ± 0.000375,31.612154 ± 2.809009,30.974159 ± 2.704756,0.081151 ± 0.020465
