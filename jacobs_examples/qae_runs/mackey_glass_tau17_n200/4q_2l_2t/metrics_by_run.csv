@@ -1,0 +1,3 @@
+dataset,arch,instance_id,layer,window_size,step,sigma_eval,mse_train_noise,mse_train_recovered,delta_train_pct,mse_test_noise,mse_test_recovered,delta_test_pct,min_train_cost,timestamp,bundle_json
+mackey_glass_tau17_n200,4q_2l_2t,1,1,4,2,0.2,0.0192680698674855,0.0143622988251383,25.460625148685168,0.0189579421529277,0.0153597756022278,18.97973166957985,0.0166986744225732,2025-09-15 14:20:35,qae_runs/mackey_glass_tau17_n200/4q_2l_2t/L1/bundle_inst01_L1.json
+mackey_glass_tau17_n200,4q_2l_2t,1,3,4,2,0.2,0.019268069867485596,0.0067355615489713945,65.04288392509156,0.018957942152927745,0.007827517516867045,58.71114357389147,0.005102107929274039,2025-09-15 14:25:28,qae_runs/mackey_glass_tau17_n200/4q_2l_2t/L3/bundle_inst01_L3.json
