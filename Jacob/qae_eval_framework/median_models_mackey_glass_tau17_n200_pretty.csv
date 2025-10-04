@@ -1,0 +1,17 @@
+Dataset,Model type,Architecture,L,Inst,Params,"MSE (noisy, test)","MSE (recovered, test)",Improvement vs noisy (%),Bundle
+mackey_glass_tau17_n200,Sidekick QAE,4q_2l_2t,1,3,24,0.018958,0.0192,-1.3,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/4q_2l_2t/L1/bundle_inst03_L1.json
+mackey_glass_tau17_n200,Sidekick QAE,4q_2l_2t,3,3,72,0.018958,0.011024,41.9,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/4q_2l_2t/L3/bundle_inst03_L3.json
+mackey_glass_tau17_n200,Sidekick QAE,4q_3l_1t,1,2,24,0.018958,0.017615,7.1,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/4q_3l_1t/L1/bundle_inst02_L1.json
+mackey_glass_tau17_n200,Sidekick QAE,4q_3l_1t,3,4,72,0.018958,0.012512,34.0,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/4q_3l_1t/L3/bundle_inst04_L3.json
+mackey_glass_tau17_n200,Sidekick QAE,6q_2l_4t,1,3,36,0.018958,0.019245,-1.5,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/6q_2l_4t/L1/bundle_inst03_L1.json
+mackey_glass_tau17_n200,Sidekick QAE,6q_2l_4t,3,3,108,0.018958,0.018553,2.1,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/6q_2l_4t/L3/bundle_inst03_L3.json
+mackey_glass_tau17_n200,Sidekick QAE,6q_4l_2t,1,3,36,0.018958,0.014421,23.9,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/6q_4l_2t/L1/bundle_inst03_L1.json
+mackey_glass_tau17_n200,Sidekick QAE,6q_4l_2t,3,2,108,0.018958,0.012693,33.0,/Users/jacobzwoniarski/Desktop/qae_architectures/Artur/qae_runs/mackey_glass_tau17_n200/6q_4l_2t/L3/bundle_inst02_L3.json
+mackey_glass_tau17_n200,Two-stage QAE,4q_2l_2t,1,2,24,0.018958,0.022875,-20.7,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/4q_2l_2t/L1/bundle_inst02_L1.json
+mackey_glass_tau17_n200,Two-stage QAE,4q_2l_2t,3,4,72,0.018958,0.017265,8.9,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/4q_2l_2t/L3/bundle_inst04_L3.json
+mackey_glass_tau17_n200,Two-stage QAE,4q_3l_1t,1,5,24,0.018958,0.020346,-7.3,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/4q_3l_1t/L1/bundle_inst05_L1.json
+mackey_glass_tau17_n200,Two-stage QAE,4q_3l_1t,3,1,72,0.018958,0.011546,39.1,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/4q_3l_1t/L3/bundle_inst01_L3.json
+mackey_glass_tau17_n200,Two-stage QAE,6q_2l_4t,1,1,36,0.018958,0.032595,-71.9,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/6q_2l_4t/L1/bundle_inst01_L1.json
+mackey_glass_tau17_n200,Two-stage QAE,6q_2l_4t,3,2,108,0.018958,0.019701,-3.9,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/6q_2l_4t/L3/bundle_inst02_L3.json
+mackey_glass_tau17_n200,Two-stage QAE,6q_4l_2t,1,4,36,0.018958,0.016712,11.8,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/6q_4l_2t/L1/bundle_inst04_L1.json
+mackey_glass_tau17_n200,Two-stage QAE,6q_4l_2t,3,1,108,0.018958,0.014594,23.0,/Users/jacobzwoniarski/Desktop/qae_architectures/Jacob/qae_runs/mackey_glass_tau17_n200/6q_4l_2t/L3/bundle_inst01_L3.json
