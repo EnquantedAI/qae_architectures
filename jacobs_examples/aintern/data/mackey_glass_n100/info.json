@@ -1,1 +1,0 @@
-{"data_name": "mackey_glass", "major_version": 6, "minor_version": 0, "samples": 100, "scale_margin": 0.2, "scale_low": 0.2, "scale_high": 0.8, "mackey_glass_beta": 0.25, "mackey_glass_gamma": 0.1, "mackey_glass_n": 10, "mackey_glass_tau": 15, "mackey_glass_dt": 1.0, "mackey_glass_T": 300}
