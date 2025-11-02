@@ -154,7 +154,7 @@ def meas_plot(meas_vals, rcParams=(8, 4), yscale='linear', log_interv=1, task='m
 #   X_list: a list of starting X points for each series
 #   labels, color, lines, marks: Plot features for each series
 #   other: standard plot properties
-def multi_plot_flat_ts(
+def multi_plot_flat_ts_with_start(
     y_list, X_list=None, labels=None, colors=None, lines=None, markers=None, marker_colors=None,
     xlim=None, ylim=None, rcParams=(12, 6), xlabel='Range', ylabel='Target value',
     legend_cols=3, title='Time series plot', save_plot=None):
@@ -228,6 +228,90 @@ def multi_plot_flat_ts(
                  color=colors[i], mec=colors[i], mfc=marker_colors[i], label=labels[i])
         if i > 0:
             plt.axvline(x = X_list[i]-0.5, color = 'lightgray', linestyle='dashed')
+    
+    plt.legend(loc='best', ncol=legend_cols)
+    
+    if save_plot is not None:
+        os.makedirs(os.path.dirname(save_plot), exist_ok=True)
+        ext = os.path.splitext(save_plot)[1][1:]
+        plt.savefig(save_plot, format=ext)
+    plt.show()    
+
+
+### Plot a list of series, where each series may start at a differ X point
+#   X_list: a list of X coordinates for the series points
+#   y_list: a list of series of series point values
+#   vert_lines: a list of vertical line styles, default none
+#   labels, color, lines, marks: Plot features for each series
+#   other: standard plot properties
+def multi_plot_flat_ts(
+    X_list, y_list, vert_lines=[], vert_line_color='lightgray',
+    labels=None, colors=None, lines=None, markers=None, marker_colors=None,
+    xlim=None, ylim=None, rcParams=(12, 6), dpi=72, xlabel='Range', ylabel='Target value',
+    legend_cols=3, title='Time series plot', save_plot=None):
+
+    # labels=['Target function', 'Training data', 'Test data', 'Fitted model', 'Model predictions'],
+    # colors=['lightblue', 'lightblue', 'pink', 'blue', 'red'],
+    # linestyles=['dashed', 'solid', 'solid', 'dashed', 'dashed'],
+
+    # Small distance from the last value
+    sigma = 0.05
+    
+    # Incompatible X and y lists
+    if len(X_list) != len(y_list):
+        print(f'*** Error: the list of data to plot cannot be empty')
+        return
+
+    if labels is None or len(labels) == 0:
+        labels = [f'Plot {0:02d}']
+    if len(labels) < len(y_list):
+        for i in range(len(labels), len(y_list)):
+            labels.append(f'Plot {i:02d}')
+
+    cmap = matplotlib.colormaps['Set1']
+    map_colors = cmap.colors+cmap.colors+cmap.colors
+    if colors is None or len(colors) == 0:
+        colors = [map_colors[0]]
+    if len(colors) < len(y_list):
+        for i in range(len(colors), len(y_list)):
+            colors.append(map_colors[i])
+
+    if marker_colors is None or len(marker_colors) == 0:
+        marker_colors = colors
+    if len(marker_colors) < len(y_list):
+        for i in range(len(marker_colors), len(y_list)):
+            marker_colors.append(colors[i])
+
+    if lines is None or len(lines) == 0:
+        lines = ['solid']
+    if len(lines) < len(y_list):
+        lines = lines+['solid']*(len(y_list)-len(lines))
+    
+    if markers is None or len(markers) == 0:
+        markers = ['none']
+    if len(markers) < len(y_list):
+        markers = markers+['none']*(len(y_list)-len(markers))
+    
+    # Parameter values
+    plt.rcParams["figure.figsize"] = rcParams   
+    plt.rcParams["figure.dpi"] = dpi
+
+    if xlim is not None:
+        plt.xlim(xlim[0], xlim[1])
+    if ylim is not None:
+        plt.ylim(ylim[0], ylim[1])
+
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    # Calculate the X_range for each list
+    
+    for i in range(len(y_list)):
+        if len(vert_lines) >= i+1:
+            plt.axvline(x = X_list[i][0]-sigma, color = vert_line_color, linestyle=vert_lines[i])
+        plt.plot(X_list[i], y_list[i], linestyle=lines[i], marker=markers[i], 
+                 color=colors[i], mec=colors[i], mfc=marker_colors[i], label=labels[i])
     
     plt.legend(loc='best', ncol=legend_cols)
     
