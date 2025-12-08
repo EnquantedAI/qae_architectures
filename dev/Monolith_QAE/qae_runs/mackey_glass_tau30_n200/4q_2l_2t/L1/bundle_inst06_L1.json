@@ -1,0 +1,103 @@
+{
+  "schema": {
+    "name": "monolith_qae_bundle",
+    "version": "1.0"
+  },
+  "timestamp": "2025-12-01 16:46:41",
+  "dataset": {
+    "id": "mackey_glass_tau30_n200",
+    "scale_low": 0.0,
+    "scale_high": 1.0,
+    "window_size": 4,
+    "window_step": 2,
+    "split": 0.75
+  },
+  "run": {
+    "instance_id": 6,
+    "layer": 1,
+    "sigma_eval": 0.2,
+    "test_seed_fixed": 99123,
+    "device_seed": 11050,
+    "training_time_sec": 80
+  },
+  "environment": {
+    "device": "lightning.qubit",
+    "diff_method": "adjoint",
+    "interface": "autograd"
+  },
+  "architecture": {
+    "type": "monolith",
+    "n_qubits": 4,
+    "n_latent": 2,
+    "n_trash": 2,
+    "n_extra": 0,
+    "rot": "Rxyz"
+  },
+  "parameters": {
+    "weights": [
+      [
+        [
+          0.7975749815991009,
+          -1.2045269126429106,
+          0.5583835069588912
+        ],
+        [
+          -0.10700811422370304,
+          -1.1987222733337801,
+          0.33685361099867545
+        ],
+        [
+          -0.10871019620920848,
+          -1.0302317434045565,
+          0.6242780053085378
+        ],
+        [
+          -0.828232226674716,
+          -0.39390821146403093,
+          0.23091172286988695
+        ]
+      ],
+      [
+        [
+          0.37308930785339983,
+          0.5583905105638652,
+          0.3941691640517914
+        ],
+        [
+          0.5836659646794479,
+          -0.14031579144419543,
+          0.3234978208622214
+        ],
+        [
+          0.55590946606211,
+          -0.03171061292716949,
+          0.06046825504759381
+        ],
+        [
+          0.46217218030804563,
+          1.1162322961607547,
+          0.040052079981908656
+        ]
+      ]
+    ]
+  },
+  "metrics": {
+    "mse_train_noise": 0.04249628927590868,
+    "mse_train_recovered": 0.03589211041882653,
+    "delta_train_pct": 15.540601237449891,
+    "mse_test_noise": 0.03574197205136823,
+    "mse_test_recovered": 0.029108663238800295,
+    "delta_test_pct": 18.558877509709227,
+    "mse_train_recovered_pure": 0.0287933699466612,
+    "mse_test_recovered_pure": 0.02751482403961388,
+    "min_train_cost": 0.025087777194441024
+  },
+  "artifacts": {
+    "weights_file": "weights_inst06_L1.npy",
+    "circuit_diagram": "circuit_4q_2l_2t_L1_inst06.eps",
+    "training_cost_plot": "training_cost_inst06_L1.eps",
+    "cost_history": "cost_inst06_L1.json",
+    "reconstruction_pure_plot": "reconstruction_pure_inst06_L1.eps",
+    "reconstruction_noisy_plot": "reconstruction_noisy_inst06_L1.eps"
+  }
+}

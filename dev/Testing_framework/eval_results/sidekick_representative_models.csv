@@ -1,0 +1,11 @@
+dataset,layer,test_noise,instance_id,arch_type,delta_test_pct,qmi_test,n_qubits,n_latent,n_trash
+mackey_glass_tau17_n200,1,0.2,1,sidekick,-25.954041440010876,0.0,4,2,2
+mackey_glass_tau17_n200,2,0.2,7,sidekick,-6.6402621970356845,0.05045644365139651,4,2,2
+mackey_glass_tau17_n200,3,0.2,4,sidekick,19.2765793298163,0.627835782766909,4,3,1
+mackey_glass_tau17_n200,4,0.2,5,sidekick,27.056800455032914,0.298263507993358,4,3,1
+mackey_glass_tau17_n200,5,0.2,4,sidekick,25.024881421934907,0.23810203020421614,4,3,1
+mackey_glass_tau30_n200,1,0.2,4,sidekick,-11.410727198630276,0.0,4,2,2
+mackey_glass_tau30_n200,2,0.2,7,sidekick,4.938202725526953,0.0,4,2,2
+mackey_glass_tau30_n200,3,0.2,2,sidekick,17.88325693981301,0.9796083216839421,4,3,1
+mackey_glass_tau30_n200,4,0.2,6,sidekick,22.917337984017806,0.0,6,2,4
+mackey_glass_tau30_n200,5,0.2,5,sidekick,25.789167316677563,2.8215132859778054,4,2,2

@@ -1,0 +1,123 @@
+{
+  "schema": {
+    "name": "monolith_qae_bundle",
+    "version": "1.0"
+  },
+  "timestamp": "2025-11-30 23:49:11",
+  "dataset": {
+    "id": "mackey_glass_tau17_n200",
+    "scale_low": 0.0,
+    "scale_high": 1.0,
+    "window_size": 6,
+    "window_step": 2,
+    "split": 0.75
+  },
+  "run": {
+    "instance_id": 7,
+    "layer": 1,
+    "sigma_eval": 0.2,
+    "test_seed_fixed": 99123,
+    "device_seed": 11051,
+    "training_time_sec": 111
+  },
+  "environment": {
+    "device": "lightning.qubit",
+    "diff_method": "adjoint",
+    "interface": "autograd"
+  },
+  "architecture": {
+    "type": "monolith",
+    "n_qubits": 6,
+    "n_latent": 4,
+    "n_trash": 2,
+    "n_extra": 0,
+    "rot": "Rxyz"
+  },
+  "parameters": {
+    "weights": [
+      [
+        [
+          0.5826386319199273,
+          -0.4477604564810903,
+          0.31537022518868113
+        ],
+        [
+          0.9433942621233415,
+          -0.3322919781359398,
+          0.34215613272772666
+        ],
+        [
+          -0.10259768785370439,
+          -0.8107265175915004,
+          0.18929065860913086
+        ],
+        [
+          -0.11604903612571359,
+          -0.9087307729855745,
+          0.26919404205940645
+        ],
+        [
+          -0.4243347110898611,
+          0.26348862575727117,
+          0.38927354523563823
+        ],
+        [
+          -0.0005515017573701397,
+          0.2437200945060914,
+          0.22845629209827448
+        ]
+      ],
+      [
+        [
+          0.43169465544766106,
+          -0.031503834027273636,
+          0.11183556983432176
+        ],
+        [
+          0.3658260296762371,
+          -0.009284479982504073,
+          0.62012436446483
+        ],
+        [
+          0.07788780031212564,
+          1.0532145514241793,
+          0.3707425996009519
+        ],
+        [
+          0.059621270224801445,
+          1.0154474756449052,
+          0.16212169960446438
+        ],
+        [
+          0.6177269546273492,
+          -0.8531130758284922,
+          0.4648412852670902
+        ],
+        [
+          0.42196781547658285,
+          1.1048136076363164,
+          0.5876918015078951
+        ]
+      ]
+    ]
+  },
+  "metrics": {
+    "mse_train_noise": 0.0400301695648753,
+    "mse_train_recovered": 0.04233602209175633,
+    "delta_train_pct": -5.760286683632532,
+    "mse_test_noise": 0.04102832521598486,
+    "mse_test_recovered": 0.03823379526404096,
+    "delta_test_pct": 6.811221119148048,
+    "mse_train_recovered_pure": 0.03566411423563093,
+    "mse_test_recovered_pure": 0.03313066735873413,
+    "min_train_cost": 0.026539863850603106
+  },
+  "artifacts": {
+    "weights_file": "weights_inst07_L1.npy",
+    "circuit_diagram": "circuit_6q_4l_2t_L1_inst07.eps",
+    "training_cost_plot": "training_cost_inst07_L1.eps",
+    "cost_history": "cost_inst07_L1.json",
+    "reconstruction_pure_plot": "reconstruction_pure_inst07_L1.eps",
+    "reconstruction_noisy_plot": "reconstruction_noisy_inst07_L1.eps"
+  }
+}

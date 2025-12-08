@@ -1,0 +1,153 @@
+{
+  "schema": {
+    "name": "sidekick_qae_bundle",
+    "version": "1.0"
+  },
+  "timestamp": "2025-12-06 02:04:17",
+  "dataset": {
+    "id": "mackey_glass_tau30_n200",
+    "scale_low": 0.0,
+    "scale_high": 1.0,
+    "window_size": 4,
+    "window_step": 2,
+    "split": 0.75
+  },
+  "run": {
+    "instance_id": 5,
+    "layer": 2,
+    "sigma_eval": 0.2,
+    "test_seed_fixed": 99123,
+    "device_seed": 12049,
+    "stage1_time_sec": 102,
+    "stage2_time_sec": 160
+  },
+  "environment": {
+    "device": "lightning.qubit",
+    "diff_method": "adjoint",
+    "interface": "autograd"
+  },
+  "architecture": {
+    "type": "sidekick",
+    "n_qubits": 4,
+    "n_latent": 3,
+    "n_trash": 1,
+    "rot": "Rxyz"
+  },
+  "parameters": {
+    "weights_stage1": [
+      [
+        [
+          0.6046133342616405,
+          -0.4354462358677684,
+          1.008886061915331
+        ],
+        [
+          1.5713282647663844,
+          1.5707356777588621,
+          0.35880997047380897
+        ],
+        [
+          -3.0306034813699853e-05,
+          1.2590690757947423,
+          -1.5719552735083728
+        ],
+        [
+          -1.1239667351742588e-12,
+          1.0865946528739747,
+          7.033172444366005e-13
+        ]
+      ],
+      [
+        [
+          0.300903795184122,
+          0.3102436399530529,
+          0.0620770289940394
+        ],
+        [
+          1.4733870750149163,
+          0.3322596748951065,
+          0.25214602547809645
+        ],
+        [
+          0.16943625602956866,
+          0.24018082444572988,
+          0.24240060121065435
+        ],
+        [
+          9.893159466471177e-13,
+          0.1839081669677434,
+          0.01759192471634705
+        ]
+      ]
+    ],
+    "weights_stage2": [
+      [
+        [
+          0.48920478737391176,
+          -0.49058412931982154,
+          1.1297124068654243
+        ],
+        [
+          1.5686030545739273,
+          1.5735136904151594,
+          0.21322614991329963
+        ],
+        [
+          -0.0021788884378198996,
+          1.2037700699713323,
+          -1.6045907213073
+        ],
+        [
+          0.0031510733746225,
+          1.172475760313906,
+          0.008009121131666156
+        ]
+      ],
+      [
+        [
+          0.5283262046126348,
+          0.4237431666063083,
+          0.03298050389068669
+        ],
+        [
+          0.838784175732645,
+          1.1883979243841987,
+          1.420353729060325
+        ],
+        [
+          0.3801010942338775,
+          0.31075614481642044,
+          0.49963596304332136
+        ],
+        [
+          0.36821255358505917,
+          -0.007613707365084555,
+          -0.4371251450072371
+        ]
+      ]
+    ]
+  },
+  "metrics": {
+    "stage1_min_cost": 0.09505442225686228,
+    "stage2_min_cost": 0.1879808293937135,
+    "mse_train_noise": 0.04249628927590868,
+    "mse_train_recovered": 0.028107923395708525,
+    "delta_train_pct": 33.85793471703652,
+    "mse_test_noise": 0.03574197205136823,
+    "mse_test_recovered": 0.02711623278498759,
+    "delta_test_pct": 24.133361343307424,
+    "mse_train_recovered_pure": 0.011831602281093947,
+    "mse_test_recovered_pure": 0.010420228293034252
+  },
+  "artifacts": {
+    "weights_s1_file": "weights_s1_inst05_L2.npy",
+    "weights_s2_file": "weights_s2_inst05_L2.npy",
+    "circuit_stage1": "circuit_stage1_4q_3l_1t_sidekick_L2_inst05.eps",
+    "circuit_stage2": "circuit_stage2_4q_3l_1t_sidekick_L2_inst05.eps",
+    "circuit_full": "circuit_full_4q_3l_1t_sidekick_L2_inst05.eps",
+    "training_cost_s1_plot": "training_cost_s1_inst05_L2.eps",
+    "training_cost_s2_plot": "training_cost_s2_inst05_L2.eps",
+    "reconstruction_pure_plot": "reconstruction_pure_inst05_L2.eps",
+    "reconstruction_noisy_plot": "reconstruction_noisy_inst05_L2.eps"
+  }
+}
