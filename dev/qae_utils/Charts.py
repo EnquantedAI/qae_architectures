@@ -119,8 +119,9 @@ def smooth_movtarg(scalars, weight):  # Weight between 0 and 1
 
 ### Plot performance measures
 def meas_plot(meas_vals, rcParams=(8, 4), yscale='linear', log_interv=1, task='min',
-                  backplot=False, back_color='linen', smooth_weight=0.9, save_plot=None,
-                  meas='cost', title_pref='', xlim=None, ylim=None):
+                  backplot=False, back_color='linen', smooth_weight=0.9,
+                  meas='cost', title_pref='', xlim=None, ylim=None,
+                  save_plot=None, show_plot=True):
         
     if task == 'min':
         opt_cost = min(meas_vals)
@@ -146,7 +147,10 @@ def meas_plot(meas_vals, rcParams=(8, 4), yscale='linear', log_interv=1, task='m
         os.makedirs(os.path.dirname(save_plot), exist_ok=True)
         ext = os.path.splitext(save_plot)[1][1:]
         plt.savefig(save_plot, format=ext)
-    plt.show()
+    if show_plot:
+        plt.show()
+    else:
+        plt.close()
 
 
 ### Plot a list of series, where each series may start at a differ X point
@@ -157,7 +161,8 @@ def meas_plot(meas_vals, rcParams=(8, 4), yscale='linear', log_interv=1, task='m
 def multi_plot_flat_ts_with_start(
     y_list, X_list=None, labels=None, colors=None, lines=None, markers=None, marker_colors=None,
     xlim=None, ylim=None, rcParams=(12, 6), xlabel='Range', ylabel='Target value',
-    legend_cols=3, title='Time series plot', save_plot=None):
+    legend_cols=3, title='Time series plot', 
+    save_plot=None, show_plot=True):
 
     # labels=['Target function', 'Training data', 'Test data', 'Fitted model', 'Model predictions'],
     # colors=['lightblue', 'lightblue', 'pink', 'blue', 'red'],
@@ -235,7 +240,10 @@ def multi_plot_flat_ts_with_start(
         os.makedirs(os.path.dirname(save_plot), exist_ok=True)
         ext = os.path.splitext(save_plot)[1][1:]
         plt.savefig(save_plot, format=ext)
-    plt.show()    
+    if show_plot:
+        plt.show()    
+    else:
+        plt.close()
 
 
 ### Plot a list of series, where each series may start at a differ X point
@@ -248,7 +256,8 @@ def multi_plot_flat_ts(
     X_list, y_list, vert_lines=[], vert_line_color='lightgray',
     labels=None, colors=None, lines=None, markers=None, marker_colors=None,
     xlim=None, ylim=None, rcParams=(12, 6), dpi=72, xlabel='Range', ylabel='Target value',
-    legend_cols=3, title='Time series plot', save_plot=None):
+    legend_cols=3, title='Time series plot', 
+    save_plot=None, show_plot=True):
 
     # labels=['Target function', 'Training data', 'Test data', 'Fitted model', 'Model predictions'],
     # colors=['lightblue', 'lightblue', 'pink', 'blue', 'red'],
@@ -319,4 +328,7 @@ def multi_plot_flat_ts(
         os.makedirs(os.path.dirname(save_plot), exist_ok=True)
         ext = os.path.splitext(save_plot)[1][1:]
         plt.savefig(save_plot, format=ext)
-    plt.show()    
+    if show_plot:
+        plt.show()
+    else:
+        plt.close()
