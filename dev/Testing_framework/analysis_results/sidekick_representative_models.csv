@@ -1,0 +1,2 @@
+dataset,layer,test_noise,instance_id,arch_type,delta_test_pct,qmi_test,n_qubits,n_latent,n_trash
+mackey_glass_tau30_n200,3,0.2,5,sidekick,24.424451762565123,0.0,6,4,2
