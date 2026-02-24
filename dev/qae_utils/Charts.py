@@ -332,3 +332,107 @@ def multi_plot_flat_ts(
         plt.show()
     else:
         plt.close()
+
+### Plot a list of objective function instances 
+### Each objective function value could be of different length
+def plot_objfn_range(objective_fn, smooth_weight=0, log_interv=1,
+                     objfn_name='Model', objfn_list=None, meas_min=True,
+                     title = 'Range of objective function values for all model instances',
+                     xlabel = 'Iterations', ylabel = 'Objective Function Value', meas_type='mean cost',
+                     color = ['red', 'blue', 'orange', 'green', 'black', 'black', 'black', 'black', 'black'], 
+                     linestyles=['solid', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid'],
+                     xlim=None, ylim=None, rcParams=(8, 4), dpi=72, prec=None, opt_format=None, save_plot = None):
+
+    ### Smooth the array of values
+    def smooth(scalars, weight):  # Weight between 0 and 1
+        last = scalars[0]  # First value in the plot (first timestep)
+        smoothed = list()
+        for point in scalars:
+            smoothed_val = last * weight + (1 - weight) * point  # Calculate smoothed value
+            smoothed.append(smoothed_val)                        # Save it
+            last = smoothed_val                                  # Anchor the last smoothed value
+            
+        return smoothed
+
+    ### Resize all arrays in a list to the longest
+    ### Then pad them to their last value
+    def resize_to_equal_and_pad(arrays):
+        
+        # Find the length of the longest array
+        max_length = max(arr.size for arr in arrays)
+        
+        # Function to pad an array with its last value
+        def pad_array(arr, target_length):
+            if arr.size >= target_length:
+                return arr
+            else:
+                padding_length = target_length - arr.size
+                padding_value = arr[-1]  # Last value of the array
+                return np.pad(arr, (0, padding_length), mode='constant', constant_values=padding_value)
+        
+        # Pad all arrays to the length of the longest array
+        return np.vstack([pad_array(arr, max_length) for arr in arrays])
+
+    if objfn_name is not None and objfn_list is None:
+        objfn_list = [f'{objfn_name}' for nm in range(len(objective_fn))]
+
+    if type(log_interv) is int:
+        log_int_list = [log_interv]*len(objective_fn)
+    elif type(log_interv) is list:
+        log_int_list = log_interv
+    else:
+        print('*** log_interv must be an interger or a list')
+        return
+
+    plt.rcParams["figure.figsize"] = rcParams
+    plt.rcParams["figure.dpi"] = dpi
+    
+    for c in range(len(objective_fn)):
+
+        if objective_fn[c] is None or objective_fn[c] == []:
+            continue
+        else:
+            select = resize_to_equal_and_pad(objective_fn[c]) # objective_fn[c] # 
+            max_vals = smooth(np.nanmax(select, axis=0), smooth_weight)
+            min_vals = smooth(np.nanmin(select, axis=0), smooth_weight)
+            mean_vals = smooth(np.nanmean(select, axis=0), smooth_weight)
+    
+            if meas_min:
+                lim = 'min'
+                sel_val = min(mean_vals)
+                sel_x = np.argmin(mean_vals)
+            else:
+                lim = 'max'
+                sel_val = max(mean_vals)
+                sel_x = np.argmax(mean_vals)
+                
+            sel_val = np.round(sel_val, prec) if prec is not None else sel_val
+            sel_val_text = f'{sel_val}' if opt_format is None else f'{sel_val:{opt_format}}'
+        
+            xrange = [x * log_interv for x in range(select.shape[1])]
+            plabel =  f'{lim}({meas_type}) = {sel_val_text} @ iter# {sel_x*log_int_list[c]}'
+    
+            if objfn_name is None:
+                plt.plot(xrange, mean_vals, color = color[c])
+            elif objfn_list is None:
+                plt.plot(xrange, mean_vals, color = color[c], linestyle=linestyles[c], label=f'{objfn_name} {c}: {plabel}')
+            else:
+                plt.plot(xrange, mean_vals, color = color[c], linestyle=linestyles[c], label=f'{objfn_list[c]}: {plabel}')
+            plt.fill_between(range(0, select.shape[1]), max_vals, min_vals, color = color[c], alpha = 0.2)
+    
+    if xlim is not None:
+        plt.xlim(xlim[0], xlim[1])
+    if ylim is not None:
+        plt.ylim(ylim[0], ylim[1])
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    if objfn_name is not None:
+        plt.legend(loc='best')
+
+    if save_plot is not None:
+        os.makedirs(os.path.dirname(save_plot), exist_ok=True)
+        ext = os.path.splitext(save_plot)[1][1:]
+        plt.savefig(save_plot, format=ext)
+    plt.show()    
