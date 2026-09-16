@@ -1,0 +1,16 @@
+# Pinned to what actually works together (2026-08-29) - the repo's own
+# requirements.txt pins PennyLane 0.40.0 but NOT autograd/autoray, and the
+# versions pip resolves by default for those two (as of today) are too new
+# and crash PennyLane 0.40.0 with:
+#   AttributeError: module 'autoray.autoray' has no attribute 'NumpyMimic'
+# and, once autoray is pinned back, a second crash during gradient computation:
+#   TypeError: unsupported operand type(s) for ** or pow(): 'NotImplementedType' and 'int'
+# Both are fixed by pinning autoray and autograd to versions from PennyLane
+# 0.40.0's own release era, below. If you already have a working PennyLane
+# env from the real qae_architectures repo, you can skip this file entirely.
+pennylane==0.40.0
+pennylane-lightning==0.40.0
+autoray==0.6.11
+autograd==1.7.0
+scikit-learn
+torch

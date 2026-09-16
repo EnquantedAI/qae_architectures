@@ -1,0 +1,21 @@
+[
+  {
+    "dataset": "beer",
+    "seed": 2023,
+    "lat": 7,
+    "trash": 1,
+    "aw": 3,
+    "reps": 2,
+    "n_weight_params": 132,
+    "epochs": 2000,
+    "device": "CPU",
+    "elapsed_sec": 7793.4,
+    "min_cost": 0.045629040948276245,
+    "train_r2": 0.8146565497507373,
+    "train_rmse": 0.1015774594688777,
+    "train_mae": 0.06396254212439798,
+    "valid_r2": 0.9094667396570026,
+    "valid_rmse": 0.09569067209408644,
+    "valid_mae": 0.06735740023049866
+  }
+]

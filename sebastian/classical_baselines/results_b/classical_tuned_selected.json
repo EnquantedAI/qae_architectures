@@ -1,0 +1,1878 @@
+[
+  {
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+      "config": {
+        "epochs": 1000,
+        "lr": 0.005
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 59.0589898855557,
+      "select_delta_sd": 2.897082589989135,
+      "select_r2_mean": 0.7701287957147525
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+      "config": {
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 53.1384388600959,
+      "select_delta_sd": 3.9927054028645457,
+      "select_r2_mean": 0.7368867191159989
+    },
+    "n_configs": 6,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 59.0589898855557,
+        "select_delta_sd": 2.897082589989135,
+        "select_r2_mean": 0.7701287957147525
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 56.922671574149184,
+        "select_delta_sd": 1.5589205128422856,
+        "select_r2_mean": 0.7581340241737742
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 56.68133457360841,
+        "select_delta_sd": 2.6685206818772373,
+        "select_r2_mean": 0.756778990998046
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 56.671147004165014,
+        "select_delta_sd": 0.44720484644280933,
+        "select_r2_mean": 0.7567217909228608
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 53.1384388600959,
+        "select_delta_sd": 3.9927054028645457,
+        "select_r2_mean": 0.7368867191159989
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 49.44087118380745,
+        "select_delta_sd": 10.232196500973888,
+        "select_r2_mean": 0.7161260116420337
+      }
+    ]
+  },
+  {
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 1000,
+        "lr": 0.002
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 64.38279587276456,
+      "select_delta_sd": 1.0686714366753163,
+      "select_r2_mean": 0.8000203321042991
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 62.132836135072786,
+      "select_delta_sd": 0.594657348660827,
+      "select_r2_mean": 0.7873874988388089
+    },
+    "n_configs": 8,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 64.38279587276456,
+        "select_delta_sd": 1.0686714366753163,
+        "select_r2_mean": 0.8000203321042991
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 63.82318415121444,
+        "select_delta_sd": 2.01361576441812,
+        "select_r2_mean": 0.7968782840696935
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 63.799370762835984,
+        "select_delta_sd": 0.9953492013250465,
+        "select_r2_mean": 0.7967445792038544
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 63.63407978101685,
+        "select_delta_sd": 1.7558311831454774,
+        "select_r2_mean": 0.7958165210796886
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 63.28447922491682,
+        "select_delta_sd": 1.2600468462227985,
+        "select_r2_mean": 0.7938536212727504
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 62.51704111136575,
+        "select_delta_sd": 0.6034699345725761,
+        "select_r2_mean": 0.7895446918427421
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 62.132836135072786,
+        "select_delta_sd": 0.594657348660827,
+        "select_r2_mean": 0.7873874988388089
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 61.122631328574734,
+        "select_delta_sd": 1.8514842685409825,
+        "select_r2_mean": 0.7817155089490792
+      }
+    ]
+  },
+  {
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+      "config": {
+        "hidden_size": 16,
+        "epochs": 1000,
+        "lr": 0.002
+      },
+      "n_params": 2597,
+      "n_seeds": 3,
+      "select_delta_mean": 62.509364731365,
+      "select_delta_sd": 2.4960614738833953,
+      "select_r2_mean": 0.7895015913254276
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+      "config": {
+        "hidden_size": 16,
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 2597,
+      "n_seeds": 3,
+      "select_delta_mean": 61.95553093955593,
+      "select_delta_sd": 0.30182464872021936,
+      "select_r2_mean": 0.7863919845926884
+    },
+    "n_configs": 12,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 62.509364731365,
+        "select_delta_sd": 2.4960614738833953,
+        "select_r2_mean": 0.7895015913254276
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 62.23914697141064,
+        "select_delta_sd": 1.9010312507828335,
+        "select_r2_mean": 0.7879844015510097
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 62.224885472024255,
+        "select_delta_sd": 2.0092849483344746,
+        "select_r2_mean": 0.7879043276097537
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 62.11772888999507,
+        "select_delta_sd": 1.473545298318681,
+        "select_r2_mean": 0.7873026762951115
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 61.95553093955593,
+        "select_delta_sd": 0.30182464872021936,
+        "select_r2_mean": 0.7863919845926884
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 61.91944636487946,
+        "select_delta_sd": 1.0369376864867332,
+        "select_r2_mean": 0.7861893807826257
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 61.746561187924755,
+        "select_delta_sd": 1.489559661602157,
+        "select_r2_mean": 0.7852186835839353
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 61.418243480965266,
+        "select_delta_sd": 0.7351330742808952,
+        "select_r2_mean": 0.7833752804418053
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 61.00608354461421,
+        "select_delta_sd": 2.3543413987340887,
+        "select_r2_mean": 0.7810611289183741
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 60.92912800678139,
+        "select_delta_sd": 2.0270293208860894,
+        "select_r2_mean": 0.7806290471961939
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 60.70422059229245,
+        "select_delta_sd": 1.8019159461463419,
+        "select_r2_mean": 0.7793662611028186
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 60.58244862298011,
+        "select_delta_sd": 1.4409234106197293,
+        "select_r2_mean": 0.7786825488750116
+      }
+    ]
+  },
+  {
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+      "config": {
+        "epochs": 1000,
+        "lr": 0.005
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 58.847205769132536,
+      "select_delta_sd": 1.2736303013569854,
+      "select_r2_mean": 0.7657006845802633
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+      "config": {
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 57.64772595690699,
+      "select_delta_sd": 1.3173901744924812,
+      "select_r2_mean": 0.758871566312191
+    },
+    "n_configs": 6,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 58.847205769132536,
+        "select_delta_sd": 1.2736303013569854,
+        "select_r2_mean": 0.7657006845802633
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 58.03660840988257,
+        "select_delta_sd": 1.4742525029033264,
+        "select_r2_mean": 0.76108562963921
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 57.88836283770856,
+        "select_delta_sd": 1.5807767914082114,
+        "select_r2_mean": 0.7602416083103175
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 57.68928370196361,
+        "select_delta_sd": 2.049784085296763,
+        "select_r2_mean": 0.7591081711746099
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 57.64772595690699,
+        "select_delta_sd": 1.3173901744924812,
+        "select_r2_mean": 0.758871566312191
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 57.1307889373989,
+        "select_delta_sd": 2.1831600372918856,
+        "select_r2_mean": 0.7559284371262018
+      }
+    ]
+  },
+  {
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 1000,
+        "lr": 0.002
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 62.17275257776833,
+      "select_delta_sd": 3.015578869906007,
+      "select_r2_mean": 0.7846343525175724
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 60.46783117208961,
+      "select_delta_sd": 2.244980606184327,
+      "select_r2_mean": 0.774927553121303
+    },
+    "n_configs": 8,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 62.17275257776833,
+        "select_delta_sd": 3.015578869906007,
+        "select_r2_mean": 0.7846343525175724
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 61.72208588371901,
+        "select_delta_sd": 0.5318558096758857,
+        "select_r2_mean": 0.7820685267973099
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 61.51680479864441,
+        "select_delta_sd": 2.1511430429766856,
+        "select_r2_mean": 0.7808997794837792
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 60.7287148694496,
+        "select_delta_sd": 1.4295323041093424,
+        "select_r2_mean": 0.7764128683432223
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 60.54029417539423,
+        "select_delta_sd": 1.6106384822899402,
+        "select_r2_mean": 0.7753401139785874
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 60.46783117208961,
+        "select_delta_sd": 2.244980606184327,
+        "select_r2_mean": 0.774927553121303
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 60.45367442400652,
+        "select_delta_sd": 1.0908936044526134,
+        "select_r2_mean": 0.7748469530928864
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 59.67299306686335,
+        "select_delta_sd": 0.6924568214626015,
+        "select_r2_mean": 0.7704022219158623
+      }
+    ]
+  },
+  {
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+      "config": {
+        "hidden_size": 64,
+        "epochs": 1000,
+        "lr": 0.002
+      },
+      "n_params": 34949,
+      "n_seeds": 3,
+      "select_delta_mean": 63.6316206923994,
+      "select_delta_sd": 1.8927557775337478,
+      "select_r2_mean": 0.7929402721260485
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+      "config": {
+        "hidden_size": 16,
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 2597,
+      "n_seeds": 3,
+      "select_delta_mean": 59.75950110804293,
+      "select_delta_sd": 0.8983149376489803,
+      "select_r2_mean": 0.770894746790673
+    },
+    "n_configs": 12,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 63.6316206923994,
+        "select_delta_sd": 1.8927557775337478,
+        "select_r2_mean": 0.7929402721260485
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 63.39651952824632,
+        "select_delta_sd": 2.0449451390068116,
+        "select_r2_mean": 0.7916017471766507
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 63.151797634357905,
+        "select_delta_sd": 2.2513919654189545,
+        "select_r2_mean": 0.7902084475653385
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 61.64916486953961,
+        "select_delta_sd": 2.6101626450274393,
+        "select_r2_mean": 0.7816533583009474
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 61.55447051849708,
+        "select_delta_sd": 2.6810410252573273,
+        "select_r2_mean": 0.7811142254902101
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 61.52089660244217,
+        "select_delta_sd": 2.463876064519175,
+        "select_r2_mean": 0.780923075759198
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 61.00604540869515,
+        "select_delta_sd": 0.792859091693479,
+        "select_r2_mean": 0.7779918220134321
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 59.75950110804293,
+        "select_delta_sd": 0.8983149376489803,
+        "select_r2_mean": 0.770894746790673
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 59.264382390324194,
+        "select_delta_sd": 1.2764187368961415,
+        "select_r2_mean": 0.7680758379223663
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 59.18413544521823,
+        "select_delta_sd": 0.7868095339579225,
+        "select_r2_mean": 0.7676189599714459
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 59.01341939517756,
+        "select_delta_sd": 2.727660599744919,
+        "select_r2_mean": 0.7666470052256441
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 58.35033780255884,
+        "select_delta_sd": 2.3033423566754383,
+        "select_r2_mean": 0.762871816538664
+      }
+    ]
+  },
+  {
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+      "config": {
+        "epochs": 1000,
+        "lr": 0.005
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 56.41448643810488,
+      "select_delta_sd": 3.342869579508233,
+      "select_r2_mean": 0.6353866649688985
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+      "config": {
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 45.96225778111134,
+      "select_delta_sd": 8.859893154324405,
+      "select_r2_mean": 0.5479488527765036
+    },
+    "n_configs": 6,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 56.41448643810488,
+        "select_delta_sd": 3.342869579508233,
+        "select_r2_mean": 0.6353866649688985
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 53.497222501338165,
+        "select_delta_sd": 3.826563681862402,
+        "select_r2_mean": 0.6109823790898307
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 52.22989472936859,
+        "select_delta_sd": 3.704879347078792,
+        "select_r2_mean": 0.6003805857930932
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 51.70476668382445,
+        "select_delta_sd": 3.5424345797825008,
+        "select_r2_mean": 0.595987642533808
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 45.96225778111134,
+        "select_delta_sd": 8.859893154324405,
+        "select_r2_mean": 0.5479488527765036
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 43.221483491554515,
+        "select_delta_sd": 8.561178669662661,
+        "select_r2_mean": 0.5250209858634823
+      }
+    ]
+  },
+  {
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 1000,
+        "lr": 0.001
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 63.01839177888047,
+      "select_delta_sd": 1.4368255523273503,
+      "select_r2_mean": 0.6906314413579735
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 61.274610142686896,
+      "select_delta_sd": 3.229789903177179,
+      "select_r2_mean": 0.6760438872378268
+    },
+    "n_configs": 8,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 63.01839177888047,
+        "select_delta_sd": 1.4368255523273503,
+        "select_r2_mean": 0.6906314413579735
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 61.403392227285416,
+        "select_delta_sd": 2.7701453830700293,
+        "select_r2_mean": 0.6771212099884476
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 61.328634089559806,
+        "select_delta_sd": 2.9586457208782098,
+        "select_r2_mean": 0.6764958229804883
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 61.274610142686896,
+        "select_delta_sd": 3.229789903177179,
+        "select_r2_mean": 0.6760438872378268
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 60.87446144058591,
+        "select_delta_sd": 1.5312678793485663,
+        "select_r2_mean": 0.6726964550095884
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 58.868187189381025,
+        "select_delta_sd": 1.8080333672305684,
+        "select_r2_mean": 0.655913026619327
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 54.38365911520558,
+        "select_delta_sd": 2.537134885220689,
+        "select_r2_mean": 0.6183978385776924
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 49.85817227311159,
+        "select_delta_sd": 6.4357016689031115,
+        "select_r2_mean": 0.580540011164645
+      }
+    ]
+  },
+  {
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+      "config": {
+        "hidden_size": 64,
+        "epochs": 1000,
+        "lr": 0.001
+      },
+      "n_params": 34949,
+      "n_seeds": 3,
+      "select_delta_mean": 62.37922229102463,
+      "select_delta_sd": 3.590719951623149,
+      "select_r2_mean": 0.6852844877586707
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+      "config": {
+        "hidden_size": 16,
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 2597,
+      "n_seeds": 3,
+      "select_delta_mean": 55.09631880950301,
+      "select_delta_sd": 2.0151432607163025,
+      "select_r2_mean": 0.6243595723429956
+    },
+    "n_configs": 12,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 62.37922229102463,
+        "select_delta_sd": 3.590719951623149,
+        "select_r2_mean": 0.6852844877586707
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 62.16341785235992,
+        "select_delta_sd": 3.525180203706034,
+        "select_r2_mean": 0.6834791820580892
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 61.831154187497475,
+        "select_delta_sd": 2.6305170564298086,
+        "select_r2_mean": 0.6806996401173224
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 60.19815570885233,
+        "select_delta_sd": 2.269077494472095,
+        "select_r2_mean": 0.6670388392515946
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 59.641178667014934,
+        "select_delta_sd": 1.4165773089743336,
+        "select_r2_mean": 0.6623794641481741
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 58.53421328419734,
+        "select_delta_sd": 1.7616608291268963,
+        "select_r2_mean": 0.6531191777133262
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 57.631250007244546,
+        "select_delta_sd": 2.064231539018841,
+        "select_r2_mean": 0.6455654649102675
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 57.06635781237346,
+        "select_delta_sd": 1.9586447546288401,
+        "select_r2_mean": 0.6408398758263512
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 56.53249347787578,
+        "select_delta_sd": 1.6043269680079073,
+        "select_r2_mean": 0.636373849398122
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 55.09631880950301,
+        "select_delta_sd": 2.0151432607163025,
+        "select_r2_mean": 0.6243595723429956
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 52.0072056834164,
+        "select_delta_sd": 1.8417819681098466,
+        "select_r2_mean": 0.5985176871122228
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 43.19867889241309,
+        "select_delta_sd": 0.6252426121960566,
+        "select_r2_mean": 0.5248302146583848
+      }
+    ]
+  },
+  {
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+      "config": {
+        "epochs": 1000,
+        "lr": 0.002
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 81.1635934474869,
+      "select_delta_sd": 0.6439167199011447,
+      "select_r2_mean": 0.8734623941094933
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+      "config": {
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 142,
+      "n_seeds": 3,
+      "select_delta_mean": 79.35078207905828,
+      "select_delta_sd": 1.3312126420276047,
+      "select_r2_mean": 0.8612844444643445
+    },
+    "n_configs": 6,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 81.1635934474869,
+        "select_delta_sd": 0.6439167199011447,
+        "select_r2_mean": 0.8734623941094933
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 81.06313282059335,
+        "select_delta_sd": 1.1480559284500695,
+        "select_r2_mean": 0.8727875282757193
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+        "config": {
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 80.29579442327157,
+        "select_delta_sd": 0.28526990437595734,
+        "select_r2_mean": 0.8676327678157417
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 79.35078207905828,
+        "select_delta_sd": 1.3312126420276047,
+        "select_r2_mean": 0.8612844444643445
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.005
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 79.22494993604687,
+        "select_delta_sd": 1.2994347444403123,
+        "select_r2_mean": 0.8604391400228448
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+        "config": {
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 142,
+        "n_seeds": 3,
+        "select_delta_mean": 78.84460865877155,
+        "select_delta_sd": 1.6055904672119008,
+        "select_r2_mean": 0.8578841158193917
+      }
+    ]
+  },
+  {
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 1000,
+        "lr": 0.001
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 81.27813991940477,
+      "select_delta_sd": 0.47225815963433315,
+      "select_r2_mean": 0.8742318846319707
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+      "config": {
+        "hidden": [
+          88,
+          66,
+          44
+        ],
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 19238,
+      "n_seeds": 3,
+      "select_delta_mean": 77.28295916961706,
+      "select_delta_sd": 3.6762193125258045,
+      "select_r2_mean": 0.847393400032023
+    },
+    "n_configs": 8,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 81.27813991940477,
+        "select_delta_sd": 0.47225815963433315,
+        "select_r2_mean": 0.8742318846319707
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 80.5317722713516,
+        "select_delta_sd": 0.7817879477777966,
+        "select_r2_mean": 0.8692179996834016
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 80.47931648351515,
+        "select_delta_sd": 0.8237109190189006,
+        "select_r2_mean": 0.8688656166644101
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 80.23625060455188,
+        "select_delta_sd": 1.6022340343721886,
+        "select_r2_mean": 0.8672327694272294
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 79.06394422543339,
+        "select_delta_sd": 0.13752090931320712,
+        "select_r2_mean": 0.8593575495879108
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            32,
+            24,
+            16
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2970,
+        "n_seeds": 3,
+        "select_delta_mean": 77.84849000052117,
+        "select_delta_sd": 0.9182457307389456,
+        "select_r2_mean": 0.8511924748290324
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 77.52300036226386,
+        "select_delta_sd": 2.2315887422219918,
+        "select_r2_mean": 0.8490059282893606
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+        "config": {
+          "hidden": [
+            88,
+            66,
+            44
+          ],
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 19238,
+        "n_seeds": 3,
+        "select_delta_mean": 77.28295916961706,
+        "select_delta_sd": 3.6762193125258045,
+        "select_r2_mean": 0.847393400032023
+      }
+    ]
+  },
+  {
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "selected": {
+      "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+      "config": {
+        "hidden_size": 64,
+        "epochs": 1000,
+        "lr": 0.001
+      },
+      "n_params": 34949,
+      "n_seeds": 3,
+      "select_delta_mean": 81.7382179185346,
+      "select_delta_sd": 0.7996839262776946,
+      "select_r2_mean": 0.8773225573869086
+    },
+    "baseline": {
+      "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+      "config": {
+        "hidden_size": 16,
+        "epochs": 300,
+        "lr": 0.002
+      },
+      "n_params": 2597,
+      "n_seeds": 3,
+      "select_delta_mean": 77.10867874034166,
+      "select_delta_sd": 0.9654799589165676,
+      "select_r2_mean": 0.8462226338239037
+    },
+    "n_configs": 12,
+    "ranking": [
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 81.7382179185346,
+        "select_delta_sd": 0.7996839262776946,
+        "select_r2_mean": 0.8773225573869086
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 81.71846290261482,
+        "select_delta_sd": 1.249278003968053,
+        "select_r2_mean": 0.8771898488253337
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 81.68443118523395,
+        "select_delta_sd": 0.9605441144330649,
+        "select_r2_mean": 0.8769612334559579
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 81.14834839049912,
+        "select_delta_sd": 0.7618314463305794,
+        "select_r2_mean": 0.8733599821654997
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 81.11804443716272,
+        "select_delta_sd": 0.6594624442534823,
+        "select_r2_mean": 0.8731564088515814
+      },
+      {
+        "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 1000,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 79.50772680782583,
+        "select_delta_sd": 0.6763560585008823,
+        "select_r2_mean": 0.8623387543816857
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 78.64496550027462,
+        "select_delta_sd": 0.19995125620447768,
+        "select_r2_mean": 0.8565429700314096
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 64,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 34949,
+        "n_seeds": 3,
+        "select_delta_mean": 78.51674653072384,
+        "select_delta_sd": 0.2992039233566748,
+        "select_r2_mean": 0.8556816315700915
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 78.39984291819096,
+        "select_delta_sd": 0.2946170797842969,
+        "select_r2_mean": 0.8548963064493673
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 77.77752808095414,
+        "select_delta_sd": 0.9829304038723228,
+        "select_r2_mean": 0.850715772896189
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+        "config": {
+          "hidden_size": 32,
+          "epochs": 300,
+          "lr": 0.001
+        },
+        "n_params": 9285,
+        "n_seeds": 3,
+        "select_delta_mean": 77.49839803133902,
+        "select_delta_sd": 0.8082999829932798,
+        "select_r2_mean": 0.8488406568483416
+      },
+      {
+        "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+        "config": {
+          "hidden_size": 16,
+          "epochs": 300,
+          "lr": 0.002
+        },
+        "n_params": 2597,
+        "n_seeds": 3,
+        "select_delta_mean": 77.10867874034166,
+        "select_delta_sd": 0.9654799589165676,
+        "select_r2_mean": 0.8462226338239037
+      }
+    ]
+  }
+]

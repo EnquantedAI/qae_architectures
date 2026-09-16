@@ -1,0 +1,6866 @@
+[
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.41,
+    "select_delta_pct": 52.76256373184272,
+    "select_r2": 0.6048366127063467,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 2.46,
+    "select_delta_pct": 55.2255418059481,
+    "select_r2": 0.6254405835287338,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.71,
+    "select_delta_pct": 58.30760562065635,
+    "select_r2": 0.6512234979519771,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.43,
+    "select_delta_pct": 58.05225757617616,
+    "select_r2": 0.6490873913770396,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 20.13,
+    "select_delta_pct": 43.03166736397516,
+    "select_r2": 0.5234330846168649,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 19.99,
+    "select_delta_pct": 52.94728218170208,
+    "select_r2": 0.6063818694795486,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 2.49,
+    "select_delta_pct": 79.36519542793353,
+    "select_r2": 0.861381269230494,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 2.48,
+    "select_delta_pct": 80.31061806233245,
+    "select_r2": 0.8677323487943174,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.31,
+    "select_delta_pct": 74.98130428489922,
+    "select_r2": 0.8319315390933968,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.39,
+    "select_delta_pct": 73.07765110877004,
+    "select_r2": 0.8191433400979198,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 20.02,
+    "select_delta_pct": 78.79938130522291,
+    "select_r2": 0.8575802913599411,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 19.96,
+    "select_delta_pct": 78.17486297038691,
+    "select_r2": 0.8533849553384678,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.52,
+    "select_delta_pct": 36.210492278399585,
+    "select_r2": 0.46637074455172167,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.58,
+    "select_delta_pct": 37.57011267569496,
+    "select_r2": 0.47774460909802763,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.57,
+    "select_delta_pct": 47.82614189431295,
+    "select_r2": 0.563541120644607,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.66,
+    "select_delta_pct": 54.76926575583823,
+    "select_r2": 0.6216236196173386,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.66,
+    "select_delta_pct": 40.69139446442123,
+    "select_r2": 0.5038556003323786,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.68,
+    "select_delta_pct": 52.518892401322184,
+    "select_r2": 0.6027981873394783,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 4.71,
+    "select_delta_pct": 45.09111886169097,
+    "select_r2": 0.5406613657027494,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 9.93,
+    "select_delta_pct": 56.42822738466353,
+    "select_r2": 0.6355016144542158,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 8.52,
+    "select_delta_pct": 49.41894671958532,
+    "select_r2": 0.5768656826822085,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 8.64,
+    "select_delta_pct": 57.72982920012123,
+    "select_r2": 0.6463901262562535,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 8.68,
+    "select_delta_pct": 50.84251008385691,
+    "select_r2": 0.5887744602428553,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 8.89,
+    "select_delta_pct": 52.479267917781435,
+    "select_r2": 0.602466709884884,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 8.92,
+    "select_delta_pct": 50.282570386111814,
+    "select_r2": 0.5840903011283545,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 8.96,
+    "select_delta_pct": 59.67523353060182,
+    "select_r2": 0.6626643491104407,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 4.93,
+    "select_delta_pct": 63.64826788906126,
+    "select_r2": 0.6959006514789761,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 12.33,
+    "select_delta_pct": 52.99514019092408,
+    "select_r2": 0.6067822242516818,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 4.95,
+    "select_delta_pct": 62.25430317213863,
+    "select_r2": 0.6842394805343897,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 5.08,
+    "select_delta_pct": 64.5117863556752,
+    "select_r2": 0.7031243898783399,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 5.23,
+    "select_delta_pct": 61.25978649620934,
+    "select_r2": 0.675919880458101,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 8.93,
+    "select_delta_pct": 56.57308559278873,
+    "select_r2": 0.6367134215445729,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 4.51,
+    "select_delta_pct": 51.0682057400771,
+    "select_r2": 0.5906625106337177,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 4.54,
+    "select_delta_pct": 42.903342926036224,
+    "select_r2": 0.5223595902959488,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 4.6,
+    "select_delta_pct": 55.602968153221454,
+    "select_r2": 0.6285979325642688,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 4.61,
+    "select_delta_pct": 55.053912867914256,
+    "select_r2": 0.6240048266827006,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 17.68,
+    "select_delta_pct": 64.67280223326317,
+    "select_r2": 0.7044713634785692,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 17.86,
+    "select_delta_pct": 62.083194866163225,
+    "select_r2": 0.6828080790205675,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 4.78,
+    "select_delta_pct": 51.57868945923172,
+    "select_r2": 0.5949329472102128,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 4.85,
+    "select_delta_pct": 56.51837501847079,
+    "select_r2": 0.6362557418401638,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 17.02,
+    "select_delta_pct": 62.299178237215024,
+    "select_r2": 0.6846148815747837,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 17.62,
+    "select_delta_pct": 58.67054714591961,
+    "select_r2": 0.6542596746339288,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 17.65,
+    "select_delta_pct": 60.79904503941434,
+    "select_r2": 0.6720655613180833,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 25.43,
+    "select_delta_pct": 64.51631008334547,
+    "select_r2": 0.7031622329894527,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 16.87,
+    "select_delta_pct": 59.39552790830304,
+    "select_r2": 0.6603244799328414,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 17.0,
+    "select_delta_pct": 56.85511165053927,
+    "select_r2": 0.639072702256869,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 16.77,
+    "select_delta_pct": 60.35392200930079,
+    "select_r2": 0.6683418976682707,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 14.16,
+    "select_delta_pct": 43.8904680495768,
+    "select_r2": 0.530617356557576,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 16.37,
+    "select_delta_pct": 61.5336499174716,
+    "select_r2": 0.6782108768743222,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 15.44,
+    "select_delta_pct": 59.12399274172071,
+    "select_r2": 0.6580529604628411,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 15.61,
+    "select_delta_pct": 61.96574166256541,
+    "select_r2": 0.681825527691602,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 18.35,
+    "select_delta_pct": 42.67390126368732,
+    "select_r2": 0.5204402028007133,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 15.13,
+    "select_delta_pct": 56.94351657860326,
+    "select_r2": 0.6398122510890474,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 15.25,
+    "select_delta_pct": 55.398157668203694,
+    "select_r2": 0.6268845964603906,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 15.53,
+    "select_delta_pct": 51.74213684711078,
+    "select_r2": 0.596300261538449,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 15.61,
+    "select_delta_pct": 50.31231987018584,
+    "select_r2": 0.5843391695646133,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 15.56,
+    "select_delta_pct": 53.96716033295259,
+    "select_r2": 0.6149136302336058,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 15.14,
+    "select_delta_pct": 56.23877069171659,
+    "select_r2": 0.633916720047471,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 46.05,
+    "select_delta_pct": 62.78727001268105,
+    "select_r2": 0.6886979990032659,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 46.89,
+    "select_delta_pct": 55.6024588456554,
+    "select_r2": 0.6285936719667664,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 46.7,
+    "select_delta_pct": 58.55563589054702,
+    "select_r2": 0.6532983878982681,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 48.4,
+    "select_delta_pct": 59.29130399240212,
+    "select_r2": 0.659452597821996,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 50.1,
+    "select_delta_pct": 56.30531059906288,
+    "select_r2": 0.634473357690291,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 16.35,
+    "select_delta_pct": 56.65213810084349,
+    "select_r2": 0.6373747329815366,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 16.75,
+    "select_delta_pct": 60.00284122917354,
+    "select_r2": 0.6654049417017949,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 54.13,
+    "select_delta_pct": 59.251561223328906,
+    "select_r2": 0.6591201308532499,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 19.42,
+    "select_delta_pct": 55.34846713663494,
+    "select_r2": 0.6264689117763265,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 19.56,
+    "select_delta_pct": 58.35837302607252,
+    "select_r2": 0.6516481911926195,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 18.79,
+    "select_delta_pct": 55.890640270919874,
+    "select_r2": 0.63100444522542,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 57.18,
+    "select_delta_pct": 60.5546967875692,
+    "select_r2": 0.6700214731857328,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 19.63,
+    "select_delta_pct": 58.046817130718466,
+    "select_r2": 0.64904187949017,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 57.99,
+    "select_delta_pct": 57.728137362981904,
+    "select_r2": 0.646375973242298,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 59.2,
+    "select_delta_pct": 57.319805702040924,
+    "select_r2": 0.6429600867119477,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 58.84,
+    "select_delta_pct": 63.677268401010764,
+    "select_r2": 0.6961432544108999,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 59.46,
+    "select_delta_pct": 58.81919384766221,
+    "select_r2": 0.655503174256499,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 20.67,
+    "select_delta_pct": 60.75490286185965,
+    "select_r2": 0.6716962912267515,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 62.17,
+    "select_delta_pct": 62.99700031381945,
+    "select_r2": 0.6904524916845682,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 21.66,
+    "select_delta_pct": 60.121816008466666,
+    "select_r2": 0.6664002217276008,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.91,
+    "select_delta_pct": 77.04332117613832,
+    "select_r2": 0.8457835803516787,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.66,
+    "select_delta_pct": 80.12530937224281,
+    "select_r2": 0.8664874978760023,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 4.58,
+    "select_delta_pct": 77.83107407871597,
+    "select_r2": 0.8510754796344626,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.6,
+    "select_delta_pct": 79.9106540961264,
+    "select_r2": 0.8650455049642538,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.68,
+    "select_delta_pct": 78.03756611041301,
+    "select_r2": 0.8524626341988732,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 4.59,
+    "select_delta_pct": 80.6130727099373,
+    "select_r2": 0.8697641528378157,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.65,
+    "select_delta_pct": 79.02421098779028,
+    "select_r2": 0.8590906330318456,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 14.65,
+    "select_delta_pct": 80.43218779112955,
+    "select_r2": 0.8685490195530343,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 12.03,
+    "select_delta_pct": 79.96793150117148,
+    "select_r2": 0.8654302782322241,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 12.11,
+    "select_delta_pct": 80.4872639775137,
+    "select_r2": 0.8689190056619667,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 12.01,
+    "select_delta_pct": 81.84419848537503,
+    "select_r2": 0.8780345046026112,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 12.07,
+    "select_delta_pct": 80.56403945030361,
+    "select_r2": 0.8694347613869698,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 11.92,
+    "select_delta_pct": 81.08254240678208,
+    "select_r2": 0.8729179163388988,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 75.25,
+    "select_delta_pct": 62.82138320853355,
+    "select_r2": 0.688983371942389,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 75.83,
+    "select_delta_pct": 58.58789813424965,
+    "select_r2": 0.653568276751483,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 11.99,
+    "select_delta_pct": 82.15943327843331,
+    "select_r2": 0.8801521620175635,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 11.97,
+    "select_delta_pct": 79.86951656278086,
+    "select_r2": 0.8647691547502535,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 78.52,
+    "select_delta_pct": 58.66696023747242,
+    "select_r2": 0.6542296684565432,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.33,
+    "select_delta_pct": 78.42666438421355,
+    "select_r2": 0.8550764854069359,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 85.04,
+    "select_delta_pct": 65.72838553029071,
+    "select_r2": 0.7133018145821399,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 11.98,
+    "select_delta_pct": 81.1604486205659,
+    "select_r2": 0.8734412680593406,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.38,
+    "select_delta_pct": 79.88673845266612,
+    "select_r2": 0.8648848464937353,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.48,
+    "select_delta_pct": 78.88448794741501,
+    "select_r2": 0.8581520135044141,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 90.07,
+    "select_delta_pct": 65.71663518582602,
+    "select_r2": 0.7132035174202411,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 9.92,
+    "select_delta_pct": 79.16103241767877,
+    "select_r2": 0.8600097603677491,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 8.58,
+    "select_delta_pct": 78.91759639509404,
+    "select_r2": 0.8583744266113076,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 24.82,
+    "select_delta_pct": 80.86296670133427,
+    "select_r2": 0.8714428693865184,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 8.6,
+    "select_delta_pct": 79.08374459926885,
+    "select_r2": 0.859490562851024,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 24.63,
+    "select_delta_pct": 81.79191465457973,
+    "select_r2": 0.8776832767419692,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 25.04,
+    "select_delta_pct": 79.65707320360036,
+    "select_r2": 0.8633420208655025,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 6.47,
+    "select_delta_pct": 79.19049168193727,
+    "select_r2": 0.8602076593014004,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 26.51,
+    "select_delta_pct": 80.47638900852702,
+    "select_r2": 0.86884595072254,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 25.62,
+    "select_delta_pct": 81.30448723841809,
+    "select_r2": 0.8744088784051878,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 8.6,
+    "select_delta_pct": 76.79977486073042,
+    "select_r2": 0.8441475056795137,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "energy",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 103.66,
+    "select_delta_pct": 62.10665813378132,
+    "select_r2": 0.6830043602974833,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 34.04,
+    "select_delta_pct": 81.1795384023003,
+    "select_r2": 0.8735695077674245,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 6.45,
+    "select_delta_pct": 78.23748642864912,
+    "select_r2": 0.8538056418669195,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 6.49,
+    "select_delta_pct": 78.50820871218393,
+    "select_r2": 0.8556242769406639,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 21.63,
+    "select_delta_pct": 78.56575476654382,
+    "select_r2": 0.8560108549180951,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 19.95,
+    "select_delta_pct": 77.69440302315923,
+    "select_r2": 0.8501573624704237,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 23.09,
+    "select_delta_pct": 81.76014694060113,
+    "select_r2": 0.8774698703016135,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 20.07,
+    "select_delta_pct": 76.8387999144803,
+    "select_r2": 0.8444096648582026,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 27.25,
+    "select_delta_pct": 80.38285010651069,
+    "select_r2": 0.8682175830619794,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 28.48,
+    "select_delta_pct": 80.08046983343837,
+    "select_r2": 0.8661862786453742,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 28.63,
+    "select_delta_pct": 80.08034374800248,
+    "select_r2": 0.8661854316393834,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 28.71,
+    "select_delta_pct": 81.43450323261395,
+    "select_r2": 0.8752822887654469,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 20.31,
+    "select_delta_pct": 76.85770351912663,
+    "select_r2": 0.8445366538817182,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 20.05,
+    "select_delta_pct": 76.29346973151144,
+    "select_r2": 0.8407462922515253,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 20.81,
+    "select_delta_pct": 78.0702924591418,
+    "select_r2": 0.8526824804740177,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 20.64,
+    "select_delta_pct": 76.5736617794188,
+    "select_r2": 0.8426285425009512,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 20.81,
+    "select_delta_pct": 77.8512398554565,
+    "select_r2": 0.8512109475700561,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 20.64,
+    "select_delta_pct": 78.49056261474392,
+    "select_r2": 0.8555057354918401,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 70.08,
+    "select_delta_pct": 79.79895235241696,
+    "select_r2": 0.8642951245143851,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 73.22,
+    "select_delta_pct": 81.3969265425727,
+    "select_r2": 0.875029859280988,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 20.89,
+    "select_delta_pct": 78.0705347010274,
+    "select_r2": 0.8526841077859025,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 72.14,
+    "select_delta_pct": 81.5922476575039,
+    "select_r2": 0.8763419708132145,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 76.26,
+    "select_delta_pct": 78.73454070953238,
+    "select_r2": 0.857144710734713,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 20.66,
+    "select_delta_pct": 78.63843143880155,
+    "select_r2": 0.8564990760703592,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 92.98,
+    "select_delta_pct": 79.98968736152815,
+    "select_r2": 0.8655764278959588,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 91.86,
+    "select_delta_pct": 80.36495911141158,
+    "select_r2": 0.8680973964605418,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 30.22,
+    "select_delta_pct": 78.87340564477961,
+    "select_r2": 0.8580775657566799,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 29.34,
+    "select_delta_pct": 78.55975973727905,
+    "select_r2": 0.8559705820216543,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 70.14,
+    "select_delta_pct": 81.6781957076842,
+    "select_r2": 0.8769193452965296,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 29.62,
+    "select_delta_pct": 78.50173111876522,
+    "select_r2": 0.8555807623158944,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 74.5,
+    "select_delta_pct": 80.29353265068961,
+    "select_r2": 0.867617573872736,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 78.05,
+    "select_delta_pct": 80.27528534165796,
+    "select_r2": 0.867494993655943,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 79.19,
+    "select_delta_pct": 82.6255452530456,
+    "select_r2": 0.8832833692985226,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.3,
+    "select_delta_pct": 78.68325731936424,
+    "select_r2": 0.8568002035488156,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 21.2,
+    "select_delta_pct": 78.17132972486147,
+    "select_r2": 0.8533612200029319,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 95.28,
+    "select_delta_pct": 82.23631080410921,
+    "select_r2": 0.8806686033047428,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 98.96,
+    "select_delta_pct": 81.49156412215524,
+    "select_r2": 0.8756656075440264,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 32.87,
+    "select_delta_pct": 78.69565254794584,
+    "select_r2": 0.856883471158527,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 70.85,
+    "select_delta_pct": 82.4225156505383,
+    "select_r2": 0.881919474345706,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 92.27,
+    "select_delta_pct": 81.93619231116223,
+    "select_r2": 0.8786524928818177,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 107.22,
+    "select_delta_pct": 82.42031905707461,
+    "select_r2": 0.8819047182574237,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 102.94,
+    "select_delta_pct": 82.03237464792672,
+    "select_r2": 0.8792986183829425,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 105.61,
+    "select_delta_pct": 80.85814238736698,
+    "select_r2": 0.8714104610214842,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "finance",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 102.84,
+    "select_delta_pct": 80.59840325723681,
+    "select_r2": 0.8696656076392253,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 4.4,
+    "select_delta_pct": 58.4227859291958,
+    "select_r2": 0.766556705792919,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 4.4,
+    "select_delta_pct": 56.42251504779854,
+    "select_r2": 0.7553257988094765,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 4.46,
+    "select_delta_pct": 48.69411078676582,
+    "select_r2": 0.7119331812428656,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 4.5,
+    "select_delta_pct": 54.369846689858534,
+    "select_r2": 0.743800696079502,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 6.19,
+    "select_delta_pct": 56.275670800258325,
+    "select_r2": 0.7545013134357627,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.5,
+    "select_delta_pct": 64.6371806232361,
+    "select_r2": 0.8014486243906702,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.48,
+    "select_delta_pct": 63.07220529733145,
+    "select_r2": 0.7926617683302848,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.58,
+    "select_delta_pct": 61.481266210549904,
+    "select_r2": 0.7837291337225735,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 6.88,
+    "select_delta_pct": 55.31094400912392,
+    "select_r2": 0.749084668642085,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.56,
+    "select_delta_pct": 62.27097825198899,
+    "select_r2": 0.7881631244203291,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 6.87,
+    "select_delta_pct": 37.67709606130549,
+    "select_r2": 0.6500760254108362,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 6.86,
+    "select_delta_pct": 54.29869074572336,
+    "select_r2": 0.7434011772956548,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 6.78,
+    "select_delta_pct": 57.03428478412782,
+    "select_r2": 0.7587606980863184,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 7.51,
+    "select_delta_pct": 62.64626394267947,
+    "select_r2": 0.7902702383735241,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 11.96,
+    "select_delta_pct": 56.691959245900506,
+    "select_r2": 0.7568386452715504,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 12.11,
+    "select_delta_pct": 62.19574802445984,
+    "select_r2": 0.7877407297858918,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 12.27,
+    "select_delta_pct": 53.77001309288981,
+    "select_r2": 0.7404328145611782,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 5.6,
+    "select_delta_pct": 62.074991002490655,
+    "select_r2": 0.7870627161758621,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 5.61,
+    "select_delta_pct": 63.2045634732614,
+    "select_r2": 0.7934049188586417,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 5.61,
+    "select_delta_pct": 59.004375304545206,
+    "select_r2": 0.7698221516072103,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 5.65,
+    "select_delta_pct": 62.27156885834517,
+    "select_r2": 0.7881664404937229,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 12.46,
+    "select_delta_pct": 62.1440517541829,
+    "select_r2": 0.7874504710972958,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 14.51,
+    "select_delta_pct": 56.48380953644009,
+    "select_r2": 0.755669948547861,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 14.62,
+    "select_delta_pct": 57.107582368196994,
+    "select_r2": 0.759172241520984,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 9.46,
+    "select_delta_pct": 62.432234008274065,
+    "select_r2": 0.7890685259917989,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 9.45,
+    "select_delta_pct": 61.93128467290494,
+    "select_r2": 0.7862558492482281,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 16.82,
+    "select_delta_pct": 57.262833969285644,
+    "select_r2": 0.7600439316040988,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 16.89,
+    "select_delta_pct": 58.497412095767174,
+    "select_r2": 0.7669757088105046,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 18.84,
+    "select_delta_pct": 59.011156658649796,
+    "select_r2": 0.769860226828861,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 18.81,
+    "select_delta_pct": 56.21389939839754,
+    "select_r2": 0.7541544859760483,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 21.53,
+    "select_delta_pct": 61.99835042499788,
+    "select_r2": 0.7866324028593091,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 21.65,
+    "select_delta_pct": 65.98345310910804,
+    "select_r2": 0.8090075311386571,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 21.71,
+    "select_delta_pct": 63.48774891953741,
+    "select_r2": 0.794994918211114,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 22.06,
+    "select_delta_pct": 63.14958834211792,
+    "select_r2": 0.7930962503727796,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 21.92,
+    "select_delta_pct": 65.03758378837306,
+    "select_r2": 0.8036967652526658,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 18.77,
+    "select_delta_pct": 65.60865695682932,
+    "select_r2": 0.8069031657933724,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 17.79,
+    "select_delta_pct": 62.10294616841192,
+    "select_r2": 0.7872196758512183,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 17.77,
+    "select_delta_pct": 60.40728590036613,
+    "select_r2": 0.7776990639565741,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 18.96,
+    "select_delta_pct": 63.08338786880216,
+    "select_r2": 0.7927245550364211,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 17.95,
+    "select_delta_pct": 59.23711380016228,
+    "select_r2": 0.7711289068172426,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 19.52,
+    "select_delta_pct": 63.378743943841485,
+    "select_r2": 0.7943828887334273,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 18.99,
+    "select_delta_pct": 64.93598047586431,
+    "select_r2": 0.8031262938417145,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 17.66,
+    "select_delta_pct": 61.94019642748816,
+    "select_r2": 0.7863058860146052,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 31.55,
+    "select_delta_pct": 62.248385776133915,
+    "select_r2": 0.7880362746035299,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 31.83,
+    "select_delta_pct": 63.04519661008731,
+    "select_r2": 0.7925101228421637,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 34.52,
+    "select_delta_pct": 64.9612154878027,
+    "select_r2": 0.8032679806874522,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 28.24,
+    "select_delta_pct": 62.26473054564502,
+    "select_r2": 0.7881280454670425,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.42,
+    "select_delta_pct": 62.20598197791034,
+    "select_r2": 0.7877981902930384,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 28.8,
+    "select_delta_pct": 61.66166584553461,
+    "select_r2": 0.7847420222964175,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.45,
+    "select_delta_pct": 60.75047337045554,
+    "select_r2": 0.7796259562541636,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.69,
+    "select_delta_pct": 61.29827509452992,
+    "select_r2": 0.7827016947782135,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.59,
+    "select_delta_pct": 63.7210508232052,
+    "select_r2": 0.7963048367844037,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.52,
+    "select_delta_pct": 59.527612596363014,
+    "select_r2": 0.7727599683845907,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.46,
+    "select_delta_pct": 59.76958721427441,
+    "select_r2": 0.7741185815861279,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 20.18,
+    "select_delta_pct": 62.69169203407144,
+    "select_r2": 0.7905253031618001,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.3,
+    "select_delta_pct": 59.70872047960726,
+    "select_r2": 0.7706056323647531,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.3,
+    "select_delta_pct": 55.61044365394623,
+    "select_r2": 0.7472725034096185,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.3,
+    "select_delta_pct": 57.74868697233737,
+    "select_r2": 0.7594463777494584,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 20.33,
+    "select_delta_pct": 59.71286492104212,
+    "select_r2": 0.7738001033214569,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.3,
+    "select_delta_pct": 59.14122978345691,
+    "select_r2": 0.7673746808801668,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.31,
+    "select_delta_pct": 57.151177184919064,
+    "select_r2": 0.756044515573021,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.28,
+    "select_delta_pct": 56.650770902345,
+    "select_r2": 0.753195502483385,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.01,
+    "select_delta_pct": 59.177222245616015,
+    "select_r2": 0.7707926341231497,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.31,
+    "select_delta_pct": 59.041502855774375,
+    "select_r2": 0.7668068955979853,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.64,
+    "select_delta_pct": 60.2437474971899,
+    "select_r2": 0.7767808460235058,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 3.29,
+    "select_delta_pct": 54.751329808413296,
+    "select_r2": 0.7423812247093984,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 30.85,
+    "select_delta_pct": 63.26913019939162,
+    "select_r2": 0.7937674412060587,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.37,
+    "select_delta_pct": 59.805388899910426,
+    "select_r2": 0.7743195970610659,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 300,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 300, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 5.31,
+    "select_delta_pct": 57.59953414800901,
+    "select_r2": 0.7585971910712221,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 11.05,
+    "select_delta_pct": 59.565999051082265,
+    "select_r2": 0.7697930621948751,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 10.98,
+    "select_delta_pct": 57.67244746495188,
+    "select_r2": 0.7590123157441389,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 15.19,
+    "select_delta_pct": 59.72214655648847,
+    "select_r2": 0.7706820723898069,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 18.23,
+    "select_delta_pct": 56.42664199709153,
+    "select_r2": 0.7519194469919386,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 17.84,
+    "select_delta_pct": 56.987341613664874,
+    "select_r2": 0.7551117341445981,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 61.92,
+    "select_delta_pct": 64.2715042965407,
+    "select_r2": 0.7993954640665573,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 62.33,
+    "select_delta_pct": 60.255140882928934,
+    "select_r2": 0.776844816387046,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 11.13,
+    "select_delta_pct": 57.424441968664986,
+    "select_r2": 0.7576003212711907,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 62.62,
+    "select_delta_pct": 62.14801123660313,
+    "select_r2": 0.787472702375658,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 17.71,
+    "select_delta_pct": 57.40033705949435,
+    "select_r2": 0.7574630823832248,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 61.98,
+    "select_delta_pct": 63.94026358227896,
+    "select_r2": 0.7975356491356895,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 62.95,
+    "select_delta_pct": 60.187101452717904,
+    "select_r2": 0.7764627958722181,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 10.93,
+    "select_delta_pct": 59.88098729807893,
+    "select_r2": 0.7715864162554171,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 64.03,
+    "select_delta_pct": 62.59007587923505,
+    "select_r2": 0.7899547596451214,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.44,
+    "select_delta_pct": 61.83070570309539,
+    "select_r2": 0.7826869428683579,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.54,
+    "select_delta_pct": 62.01773869369423,
+    "select_r2": 0.7837517964822431,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.65,
+    "select_delta_pct": 57.8933558281995,
+    "select_r2": 0.7602700354019838,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 6.6,
+    "select_delta_pct": 61.49239899437511,
+    "select_r2": 0.7807608274796825,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 11.24,
+    "select_delta_pct": 61.24203837119042,
+    "select_r2": 0.7793354243274409,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 11.24,
+    "select_delta_pct": 59.113400534062976,
+    "select_r2": 0.767216237833868,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "TinyMLP",
+    "config": {
+      "epochs": 1000,
+      "lr": 0.005
+    },
+    "config_key": "{\"epochs\": 1000, \"lr\": 0.005}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 142,
+    "elapsed_sec": 15.16,
+    "select_delta_pct": 59.2361880406537,
+    "select_r2": 0.7679153162141819,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 5.66,
+    "select_delta_pct": 60.15699409354316,
+    "select_r2": 0.7731578333228871,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 5.68,
+    "select_delta_pct": 58.87980864209301,
+    "select_r2": 0.7658863057745983,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 5.75,
+    "select_delta_pct": 59.98217646495389,
+    "select_r2": 0.7721625266501012,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 91.46,
+    "select_delta_pct": 63.72716114329886,
+    "select_r2": 0.7963391443560677,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 92.03,
+    "select_delta_pct": 60.18827754051939,
+    "select_r2": 0.7764693992442042,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 93.07,
+    "select_delta_pct": 60.83485838166691,
+    "select_r2": 0.780099752188767,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 93.08,
+    "select_delta_pct": 61.79116714501944,
+    "select_r2": 0.7854691323404996,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 9.83,
+    "select_delta_pct": 61.07444318512276,
+    "select_r2": 0.7783812379083364,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 8.68,
+    "select_delta_pct": 61.09251786918482,
+    "select_r2": 0.778484144313146,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 9.69,
+    "select_delta_pct": 59.194062217711995,
+    "select_r2": 0.7676754770571768,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 67.72,
+    "select_delta_pct": 61.612896367782945,
+    "select_r2": 0.7844681966494245,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 68.33,
+    "select_delta_pct": 63.2984485708383,
+    "select_r2": 0.793932054861982,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 68.16,
+    "select_delta_pct": 60.813368600694105,
+    "select_r2": 0.7799790936652418,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 67.28,
+    "select_delta_pct": 62.075391114130184,
+    "select_r2": 0.7870649626798973,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 95.49,
+    "select_delta_pct": 62.190131799478934,
+    "select_r2": 0.7877091964066155,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 66.95,
+    "select_delta_pct": 62.86957937981409,
+    "select_r2": 0.7915240860027379,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 22.16,
+    "select_delta_pct": 61.21307524987867,
+    "select_r2": 0.7791705256948549,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 22.17,
+    "select_delta_pct": 62.27416763328142,
+    "select_r2": 0.785211748986611,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 96.17,
+    "select_delta_pct": 65.14968485409666,
+    "select_r2": 0.8043261783254627,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 22.3,
+    "select_delta_pct": 59.303495761549094,
+    "select_r2": 0.7682985259870052,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 23.25,
+    "select_delta_pct": 61.89880265505485,
+    "select_r2": 0.783074646049259,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 22.24,
+    "select_delta_pct": 65.31595931670103,
+    "select_r2": 0.8025298855164531,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 18.98,
+    "select_delta_pct": 59.252712196053324,
+    "select_r2": 0.7680093948392274,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 19.01,
+    "select_delta_pct": 62.34630537031438,
+    "select_r2": 0.78562245797293,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 19.11,
+    "select_delta_pct": 60.02186495981498,
+    "select_r2": 0.7723884891236048,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 18.16,
+    "select_delta_pct": 59.59997912218296,
+    "select_r2": 0.7699865243289926,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        88,
+        66,
+        44
+      ],
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [88, 66, 44], \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 19238,
+    "elapsed_sec": 37.23,
+    "select_delta_pct": 61.67901476799692,
+    "select_r2": 0.7818233057104638,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 18.21,
+    "select_delta_pct": 58.951633643101175,
+    "select_r2": 0.7662952342296584,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.61,
+    "select_delta_pct": 59.468329840438614,
+    "select_r2": 0.76923699231872,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 19.14,
+    "select_delta_pct": 58.294713417282516,
+    "select_r2": 0.7625551246679305,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 28.94,
+    "select_delta_pct": 59.32561164744945,
+    "select_r2": 0.7684244405700413,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 28.58,
+    "select_delta_pct": 58.951833216926694,
+    "select_r2": 0.7662963704832608,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 27.38,
+    "select_delta_pct": 58.173267882732006,
+    "select_r2": 0.7618636866711243,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 29.35,
+    "select_delta_pct": 63.62552566176254,
+    "select_r2": 0.7929055706791025,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 28.88,
+    "select_delta_pct": 60.66804607131387,
+    "select_r2": 0.7760674566127139,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 28.14,
+    "select_delta_pct": 60.72689055884465,
+    "select_r2": 0.7764024818133684,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.57,
+    "select_delta_pct": 61.96970430579902,
+    "select_r2": 0.783478317501999,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "MLP-AE",
+    "config": {
+      "hidden": [
+        32,
+        24,
+        16
+      ],
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden\": [32, 24, 16], \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2970,
+    "elapsed_sec": 32.08,
+    "select_delta_pct": 61.599277086721216,
+    "select_r2": 0.7813693272021941,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.64,
+    "select_delta_pct": 56.59431095067025,
+    "select_r2": 0.7528740533989846,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 18.57,
+    "select_delta_pct": 58.476242929063396,
+    "select_r2": 0.7635886447759487,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 29.41,
+    "select_delta_pct": 59.789363077933565,
+    "select_r2": 0.7710647629276871,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau17",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 105.1,
+    "select_delta_pct": 60.32833862515301,
+    "select_r2": 0.7772557992403994,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.12,
+    "select_delta_pct": 60.86608857092606,
+    "select_r2": 0.7771949917643451,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.16,
+    "select_delta_pct": 57.83988101972921,
+    "select_r2": 0.7599655819316677,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.13,
+    "select_delta_pct": 64.64348599471559,
+    "select_r2": 0.7987012259582391,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.63,
+    "select_delta_pct": 56.345043817021235,
+    "select_r2": 0.751454875919979,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.75,
+    "select_delta_pct": 59.83256909426922,
+    "select_r2": 0.7713107520576759,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 300,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 300, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 31.53,
+    "select_delta_pct": 60.18735646650642,
+    "select_r2": 0.7733306984547152,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 61.59,
+    "select_delta_pct": 60.402565948769784,
+    "select_r2": 0.7745559721040151,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 60.85,
+    "select_delta_pct": 61.90401072127497,
+    "select_r2": 0.7831042976530648,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 60.6,
+    "select_delta_pct": 58.65503347966479,
+    "select_r2": 0.7646065708826042,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 60.87,
+    "select_delta_pct": 62.84734605731526,
+    "select_r2": 0.7884750829806794,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 61.05,
+    "select_delta_pct": 63.44511507163879,
+    "select_r2": 0.7918784210395585,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 62.29,
+    "select_delta_pct": 58.88737389731668,
+    "select_r2": 0.7659293777980904,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 62.79,
+    "select_delta_pct": 61.05623637797972,
+    "select_r2": 0.778277579273988,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 16,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 16, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 2597,
+    "elapsed_sec": 80.45,
+    "select_delta_pct": 60.71155955604068,
+    "select_r2": 0.7763151962832165,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 61.94,
+    "select_delta_pct": 64.83888656872274,
+    "select_r2": 0.7998137195708395,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 66.73,
+    "select_delta_pct": 61.905400542858516,
+    "select_r2": 0.7831122104631586,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 63.25,
+    "select_delta_pct": 64.29443563803649,
+    "select_r2": 0.7967139426851245,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 32,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 32, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 9285,
+    "elapsed_sec": 74.93,
+    "select_delta_pct": 63.769915367151306,
+    "select_r2": 0.7937276390163449,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 67.0,
+    "select_delta_pct": 60.99973689580099,
+    "select_r2": 0.7779559051266194,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2023,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 66.21,
+    "select_delta_pct": 61.5794115265312,
+    "select_r2": 0.7812562246233792,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 66.47,
+    "select_delta_pct": 62.96479921729598,
+    "select_r2": 0.7891437907924257,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 65.66,
+    "select_delta_pct": 65.30876489627242,
+    "select_r2": 0.8024889248037538,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.001
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.001}",
+    "sigma": 0.2,
+    "seed": 2024,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 74.56,
+    "select_delta_pct": 65.49085678997673,
+    "select_r2": 0.8035256467769705,
+    "select_noise_seed": 424242
+  },
+  {
+    "stage": "search",
+    "dataset": "mackey_glass_tau30",
+    "model": "LSTM-AE",
+    "config": {
+      "hidden_size": 64,
+      "epochs": 1000,
+      "lr": 0.002
+    },
+    "config_key": "{\"epochs\": 1000, \"hidden_size\": 64, \"lr\": 0.002}",
+    "sigma": 0.2,
+    "seed": 2025,
+    "window": 6,
+    "stride": 2,
+    "latent": 4,
+    "n_params": 34949,
+    "elapsed_sec": 72.06,
+    "select_delta_pct": 64.00668565439459,
+    "select_r2": 0.7950756669510125,
+    "select_noise_seed": 424242
+  }
+]

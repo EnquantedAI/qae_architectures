@@ -1,0 +1,31 @@
+# Validated combination (dev sandbox, CPU-only, Python 3.11.15):
+qiskit==2.5.2
+qiskit-algorithms==0.4.0
+qiskit-machine-learning==0.9.0
+torch==2.13.0
+scikit-learn>=1.8
+pandas>=3.0
+numpy>=2.4
+ipython
+matplotlib
+
+# --- Aer: pick ONE of the next two lines depending on the machine ---
+# CPU-only machine:
+# qiskit-aer==0.17.2
+# GPU machine (Ubuntu + NVIDIA + CUDA toolkit installed - GPU Aer wheels are
+# not published for macOS/Windows): install this INSTEAD of qiskit-aer.
+# Requires a CUDA-compatible NVIDIA driver already on the system; check with
+# `nvidia-smi` first (also confirms both cards - A40 + Tesla L4 - are seen).
+# IMPORTANT: verified on PyPI - the correct package is qiskit-aer-gpu-cu11,
+# NOT qiskit-aer-gpu-cu12 (that name does not exist / has no releases). The
+# "cu11" wheel works fine on newer CUDA 12.x drivers too (the driver is
+# backwards compatible) - if in doubt just use this exact line:
+qiskit-aer-gpu-cu11==0.17.2
+
+# --- PyTorch CUDA build ---
+# The line above (torch==2.13.0) installs whatever wheel `pip` resolves by
+# default, which on most systems is already CUDA-enabled if a GPU + driver
+# are present. If `torch.cuda.is_available()` returns False after install,
+# reinstall from https://pytorch.org/get-started/locally/ with the CUDA
+# build matching your driver (`nvidia-smi` shows the max supported CUDA
+# version in the top-right corner).
