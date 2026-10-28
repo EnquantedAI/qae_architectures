@@ -44,6 +44,7 @@ from sklearn.metrics import mean_squared_error
 
 from qae_utils.Window import ts_wind_split, ts_wind_flatten_avg  # noqa: F401 (flatten used below)
 from qae_utils.Window import ts_add_noise, ts_wind_make
+from datasets_qml import DATASET_CHOICES, load_realworld_series
 
 
 # ---------------------------------------------------------------------------
@@ -246,17 +247,35 @@ def train_with_noise(model, W, cost_fun, optimizer, n_epochs, init_weights, spli
 def run_one(tau, sigma, seed, n_epochs, wind_size=6, wind_step=2, n_latent=4, n_layers=4,
             rot="Rxyz", split=0.75, lr_initial=0.1, batch_size=10, weight_scaler=0.1,
             beta=0.17, gamma=0.1, n=10, x0=1.2, length=1200, noise_clip=True, log_interv=10,
-            sim="lightning.qubit"):
+            sim="lightning.qubit", dataset="mackey_glass"):
+    """Train + evaluate one Monolith QAE run.
+
+    `dataset` is keyword-only in practice (it was added after `tau`, so every
+    existing positional call `run_one(tau, sigma, seed, n_epochs)` keeps
+    working unchanged and still means Mackey-Glass). For the real-world
+    series (`energy`, `finance`) `tau` is meaningless and is recorded as
+    None in the result row; everything downstream of the data-loading block
+    below - encoding range, windowing, training loop, noise protocol, eval
+    metric - is IDENTICAL across datasets, which is what makes the resulting
+    Delta_test values directly comparable."""
     n_trash = wind_size - n_latent
     n_wires = n_latent + 2 * n_trash  # n_extra=0, matches the real notebook
 
     np.random.seed(seed)
 
-    # data (real notebook's exact recipe: min-max normalise raw series to [0,1],
-    # THEN downsample by 6 starting at offset 3 -> 200 points)
-    data_y = mackey_glass(length=length, beta=beta, gamma=gamma, n=n, tau=tau, x0=x0)
-    data_y = x2y(data_y, xlim=(np.min(data_y), np.max(data_y)), ylim=(0, 1))
-    data_y = data_y[3::6]
+    if dataset == "mackey_glass":
+        # data (real notebook's exact recipe: min-max normalise raw series to [0,1],
+        # THEN downsample by 6 starting at offset 3 -> 200 points)
+        # UNCHANGED - this is the path that produced the existing MG rows.
+        data_y = mackey_glass(length=length, beta=beta, gamma=gamma, n=n, tau=tau, x0=x0)
+        data_y = x2y(data_y, xlim=(np.min(data_y), np.max(data_y)), ylim=(0, 1))
+        data_y = data_y[3::6]
+    else:
+        # Real-world series, loaded exactly as the classical track loads them
+        # (first 200 points, THEN min-max normalise to [0,1]) - see
+        # datasets_qml.py and verify_tracks_match.py.
+        tau = None
+        data_y = np.array(load_realworld_series(dataset, n_samples=200))
     assert len(data_y) == 200, f"expected 200 points, got {len(data_y)}"
 
     y_enc_low, y_enc_high = 0.0, np.pi / 4
@@ -293,7 +312,7 @@ def run_one(tau, sigma, seed, n_epochs, wind_size=6, wind_step=2, n_latent=4, n_
     # actually produced the published eval CSVs / Table 2 numbers - instead
     # of this script's earlier `seed=seed+n_epochs, noise_clip=noise_clip`
     # (True), which varied per run and wasn't comparable across seeds/epoch
-    # counts, nor to project_b_classical's eval_fixed_noise() (same
+    # counts, nor to experiments/classical's eval_fixed_noise() (same
     # TEST_SEED_FIXED=99123, clip=False). Training-time noise (train_with_noise
     # call above) is UNCHANGED and still uses noise_clip=True, matching this
     # specific notebook's own training protocol - only the final eval
@@ -313,9 +332,20 @@ def run_one(tau, sigma, seed, n_epochs, wind_size=6, wind_step=2, n_latent=4, n_
 
     mse_test_noise = mean_squared_error(y_test_pure_flat, y_test_noisy_flat)
     mse_test_rec = mean_squared_error(y_test_pure_flat, pred_test_flat)
-    delta_test_pct = 100.0 * (1.0 - mse_test_rec / max(mse_test_noise, 1e-12))
+    if mse_test_noise == 0:
+        # sigma=0: no noise to remove, so Delta_test is undefined (division
+        # by zero) rather than a real percentage. The old `max(., 1e-12)`
+        # guard didn't crash but produced nonsense (~1e11 %, since
+        # mse_test_rec / 1e-12 blows up) - a sentinel of 0.0 is used instead,
+        # matching experiments/classical/metrics_b.py's fix for the same case.
+        # mse_test_rec is still stored below and IS the reconstruction floor
+        # at sigma=0 - that's what analyse_qae_floor.py actually uses.
+        delta_test_pct = 0.0
+    else:
+        delta_test_pct = 100.0 * (1.0 - mse_test_rec / mse_test_noise)
 
     return {
+        "dataset": dataset,
         "tau": tau, "sigma": sigma, "seed": seed, "n_epochs": n_epochs,
         "wind_size": wind_size, "wind_step": wind_step, "n_latent": n_latent,
         "n_trash": n_trash, "n_layers": n_layers, "rot": rot,
@@ -329,6 +359,9 @@ def run_one(tau, sigma, seed, n_epochs, wind_size=6, wind_step=2, n_latent=4, n_
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--dataset", default="mackey_glass", choices=DATASET_CHOICES,
+                     help="mackey_glass (uses --tau) or a real-world series "
+                          "(energy/finance; --tau is ignored)")
     ap.add_argument("--tau", type=int, default=30, choices=[17, 30])
     ap.add_argument("--sigma", type=float, default=0.2)
     ap.add_argument("--seed", type=int, default=2025)
@@ -342,9 +375,9 @@ def main():
 
     row = run_one(args.tau, args.sigma, args.seed, args.n_epochs,
                    wind_size=args.wind_size, n_latent=args.n_latent,
-                   n_layers=args.n_layers, rot=args.rot)
+                   n_layers=args.n_layers, rot=args.rot, dataset=args.dataset)
 
-    print(f"\ntau={row['tau']} sigma={row['sigma']} seed={row['seed']} "
+    print(f"\ndataset={row['dataset']} tau={row['tau']} sigma={row['sigma']} seed={row['seed']} "
           f"n_weights={row['n_weights']} n_wires={row['n_wires']} "
           f"Delta_test={row['delta_test_pct']:+.2f}% ({row['elapsed_sec']:.1f}s)")
 

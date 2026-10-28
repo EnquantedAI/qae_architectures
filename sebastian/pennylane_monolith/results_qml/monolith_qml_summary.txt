@@ -1,8 +1,41 @@
-  tau  sigma   n  n_weights      Delta_test%
---------------------------------------------
-   17    0.1   5        144  +30.70 +/- 12.81
-   17    0.2   5        144  +68.98 +/- 1.92
-   17    0.3   5        144  +79.00 +/- 0.91
-   30    0.1   5        144  +41.13 +/- 6.90
-   30    0.2   5        144  +65.28 +/- 2.24
-   30    0.3   5        144  +73.66 +/- 3.11
+Canonical runs; population SD; Delta is undefined at sigma=0.
+energy                 sigma=0.00 n=7 Delta=undefined
+energy                 sigma=0.10 n=7 Delta=-75.38 +/- 24.88
+energy                 sigma=0.15 n=7 Delta=+6.90 +/- 9.82
+energy                 sigma=0.20 n=7 Delta=+31.19 +/- 6.68
+energy                 sigma=0.25 n=7 Delta=+46.65 +/- 4.26
+energy                 sigma=0.30 n=7 Delta=+52.95 +/- 8.11
+energy                 sigma=0.35 n=7 Delta=+57.81 +/- 5.34
+energy                 sigma=0.40 n=7 Delta=+61.19 +/- 3.57
+energy                 sigma=0.45 n=7 Delta=+65.90 +/- 2.69
+energy                 sigma=0.50 n=7 Delta=+67.10 +/- 3.76
+finance                sigma=0.00 n=7 Delta=undefined
+finance                sigma=0.10 n=7 Delta=+71.25 +/- 1.89
+finance                sigma=0.15 n=7 Delta=+77.59 +/- 1.85
+finance                sigma=0.20 n=7 Delta=+79.04 +/- 1.59
+finance                sigma=0.25 n=7 Delta=+81.81 +/- 1.48
+finance                sigma=0.30 n=7 Delta=+83.98 +/- 3.27
+finance                sigma=0.35 n=7 Delta=+83.96 +/- 1.27
+finance                sigma=0.40 n=7 Delta=+86.69 +/- 2.43
+finance                sigma=0.45 n=7 Delta=+88.38 +/- 1.23
+finance                sigma=0.50 n=7 Delta=+90.18 +/- 1.64
+mackey_glass_tau17     sigma=0.00 n=7 Delta=undefined
+mackey_glass_tau17     sigma=0.10 n=7 Delta=+30.71 +/- 10.85
+mackey_glass_tau17     sigma=0.15 n=7 Delta=+59.95 +/- 4.31
+mackey_glass_tau17     sigma=0.20 n=7 Delta=+68.90 +/- 2.12
+mackey_glass_tau17     sigma=0.25 n=7 Delta=+76.60 +/- 2.02
+mackey_glass_tau17     sigma=0.30 n=7 Delta=+79.54 +/- 1.28
+mackey_glass_tau17     sigma=0.35 n=7 Delta=+81.47 +/- 1.35
+mackey_glass_tau17     sigma=0.40 n=7 Delta=+84.50 +/- 1.03
+mackey_glass_tau17     sigma=0.45 n=7 Delta=+84.54 +/- 0.90
+mackey_glass_tau17     sigma=0.50 n=7 Delta=+84.86 +/- 1.41
+mackey_glass_tau30     sigma=0.00 n=7 Delta=undefined
+mackey_glass_tau30     sigma=0.10 n=7 Delta=+42.00 +/- 6.01
+mackey_glass_tau30     sigma=0.15 n=7 Delta=+60.02 +/- 2.60
+mackey_glass_tau30     sigma=0.20 n=7 Delta=+65.91 +/- 2.15
+mackey_glass_tau30     sigma=0.25 n=7 Delta=+71.06 +/- 1.60
+mackey_glass_tau30     sigma=0.30 n=7 Delta=+73.91 +/- 2.82
+mackey_glass_tau30     sigma=0.35 n=7 Delta=+76.33 +/- 1.59
+mackey_glass_tau30     sigma=0.40 n=7 Delta=+78.57 +/- 1.49
+mackey_glass_tau30     sigma=0.45 n=7 Delta=+80.37 +/- 1.59
+mackey_glass_tau30     sigma=0.50 n=7 Delta=+80.63 +/- 1.38

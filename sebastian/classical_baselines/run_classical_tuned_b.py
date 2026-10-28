@@ -335,6 +335,12 @@ def main():
     ap.add_argument("--quick", action="store_true",
                     help="1 seed, 2 configs/model, sigma=0.2 only - smoke test")
     ap.add_argument("--search-only", action="store_true")
+    ap.add_argument("--sigma", type=float, default=None,
+                    help="run Stage 2 (final) at this single noise level "
+                         "instead of SIGMAS_FINAL; Stage 1 selection is "
+                         "unaffected (always sigma=0.2). --sigma 0 measures "
+                         "the reconstruction floor directly, so it is checked "
+                         "with 'is not None', not truthiness.")
     args = ap.parse_args()
 
     datasets = [d.strip() for d in args.datasets.split(",") if d.strip()]
@@ -345,6 +351,8 @@ def main():
     if args.quick:
         grids = {m: g[:2] for m, g in grids.items()}
         search_seeds, final_seeds, sigmas = [2023], [2023], [0.2]
+    if args.sigma is not None:
+        sigmas = [args.sigma]
 
     print(f"Datasets: {datasets}\nModels:   {models}")
     print(f"Search:   sigma={SIGMA_SELECT}, seeds={search_seeds}, "

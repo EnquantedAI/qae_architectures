@@ -1,0 +1,31 @@
+{
+  "synchronized_on": "2026-10-28",
+  "description": "Raw logs synchronized without changing scientific values; historical placeholders and noncanonical runs retained.",
+  "files": [
+    {
+      "path": "pennylane_monolith/results_qml/monolith_qml.json",
+      "sha256": "f03026cc8537f3026ef159004cb9a0faa12770a79f32b3d1e09c49bf73849c34",
+      "rows": 282
+    },
+    {
+      "path": "classical_baselines/results_b/classical_grid_b.json",
+      "sha256": "1dda17fa29660c9fa9b776704cb4bd5210a77317042dfcff2081a56c66393586",
+      "rows": 225
+    },
+    {
+      "path": "classical_baselines/results_b/classical_tuned_final.json",
+      "sha256": "3b3f162c110527f57cb7c99c08e57aee56125e8770fb5b923577cc10435f9b2c",
+      "rows": 1213
+    },
+    {
+      "path": "classical_baselines/results_b/classical_tuned_search.json",
+      "sha256": "0c336b63f2e3dc26756bba82ee75c88583ec50cb8fff9174f416018effaac792",
+      "rows": 312
+    },
+    {
+      "path": "classical_baselines/results_b/classical_tuned_selected.json",
+      "sha256": "08ef13d346d5f936241288b4006694c144e1c066965cf1203cd2f0fd1ff69380",
+      "rows": 12
+    }
+  ]
+}

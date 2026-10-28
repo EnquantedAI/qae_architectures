@@ -1,6 +1,6 @@
 """
 Real-world series loaders for the quantum track, byte-identical to the
-classical track's own loaders (`classical_baselines/datasets_b.py`:
+classical track's own loaders (`experiments/classical/datasets_b.py`:
 `series_energy`, `series_finance`).
 
 WHY THIS EXISTS
@@ -9,7 +9,7 @@ QUANTICS 2026 ran the QAE on Mackey-Glass only. The CMES extension needs the
 same Monolith QAE run on at least one NON-CHAOTIC, real-world series, so the
 paper's classical-vs-quantum comparison is not a single-dataset claim. The
 classical side already has energy/finance under the QUANTICS 2026 protocol
-(classical_baselines/results_b/classical_grid_b.json); this module is the
+(experiments/classical/results_b/classical_grid_b.json); this module is the
 missing quantum-side half.
 
 THE ONE RULE THIS MODULE EXISTS TO ENFORCE
@@ -61,7 +61,7 @@ def _data_path(filename):
     raise FileNotFoundError(
         f"Could not find {filename}. Looked in:\n  " + "\n  ".join(tried) +
         "\nSet QAE_DATA_DIR to the directory holding the CSVs, or copy "
-        "classical_baselines/data/ next to this script.")
+        "experiments/classical/data/ next to this script.")
 
 
 def _normalise_to_01(values):

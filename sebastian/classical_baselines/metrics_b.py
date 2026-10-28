@@ -48,8 +48,8 @@ def delta_improvement(noisy_windows, pred_windows, true_windows, stride):
         Delta = 100 * (1 - MSE(pred, true) / MSE(noisy, true))
 
     NOTE (fixed 2026-08-30): this was previously computed on MAE, not MSE -
-    a real bug found while auditing this code before trusting it for the
-    paper. MAE and
+    a real bug (found independently by both Claude and the user at the same
+    time while auditing this code before trusting it for the paper). MAE and
     MSE give different percentages for the same run, so every
     `delta_test_pct` value computed before this fix is NOT directly
     comparable to the real repo's own Delta_test numbers and needs
@@ -62,5 +62,12 @@ def delta_improvement(noisy_windows, pred_windows, true_windows, stride):
     mse_noisy = mean_squared_error(true_merged, noisy_merged)
     mse_pred = mean_squared_error(true_merged, pred_merged)
     if mse_noisy == 0:
-        return 0.0
+        # sigma=0 (or a degenerate noise draw): Delta is undefined by the
+        # formula (division by zero) since there is no noise to remove.
+        # mse_pred is still meaningful - at sigma=0 it IS the reconstruction
+        # floor - so callers get a proper 3-tuple with delta pinned to 0.0
+        # (matches the pre-existing sentinel convention here) instead of the
+        # bare float this used to return, which broke the 3-way unpack in
+        # run_classical_grid_b.py / run_classical_tuned_b.py.
+        return 0.0, float(mse_noisy), float(mse_pred)
     return float(100.0 * (1.0 - mse_pred / mse_noisy)), float(mse_noisy), float(mse_pred)

@@ -5,10 +5,22 @@ additional noise levels beyond sigma=0.2"), which has NO existing data in the
 real repo's eval CSVs (those only cover sigma=0.2) - so these are genuinely
 new numbers, not a re-run of something already computed.
 
-Scope: Mackey-Glass ONLY (tau=17 and tau=30) - same as QUANTICS 2026's own
-paper, which never tested the QAE on beer/energy/finance. Those three only
-exist in the classical comparison (project_b_classical); there's no reviewer
-request or existing precedent for running the quantum model on them.
+Scope (extended 2026-09-08): Mackey-Glass (tau=17, tau=30) AND the real-world,
+non-chaotic series `energy` and `finance`, via --dataset.
+
+The real-world half is new. QUANTICS 2026 tested the QAE on Mackey-Glass only,
+so the classical-vs-quantum comparison rested on a single synthetic dataset;
+the classical side already covered energy/finance under this exact protocol
+(experiments/classical/results_b/classical_grid_b.json), the quantum side did
+not. `beer` is deliberately NOT included: it is paper_279's own dataset, and
+the QuTSAE configuration it would be compared against was designed on it -
+a home-field advantage that makes that particular comparison uninformative.
+
+Everything except the data-loading block is shared across datasets (encoding
+range, windowing, training loop, noise schedule, fixed eval seed 99123,
+Delta_test metric), and datasets_qml.py mirrors the classical track's loaders
+line-for-line - run verify_tracks_match.py to assert both tracks see
+numerically identical series before trusting any cross-track table.
 
 Each run is essentially single-core-bound (lightning.qubit on an 8-wire
 circuit is dominated by per-circuit-call Python/C++ dispatch overhead, not
@@ -50,6 +62,13 @@ Usage:
     python3 sweep_monolith_qae.py --sigma 0.1
     python3 sweep_monolith_qae.py --sigma 0.3
 
+    # NEW: the real-world series, full noise sweep, 5 seeds (15 runs each)
+    python3 sweep_monolith_qae.py --dataset energy  --workers 6
+    python3 sweep_monolith_qae.py --dataset finance --workers 6
+
+    # smoke test on a real-world series first (1 seed, 20 epochs, ~1 min)
+    python3 sweep_monolith_qae.py --dataset energy --quick
+
 Resumable: reruns skip (tau, sigma, seed, n_epochs) combinations already
 present in results_qml/monolith_qml.json, so Ctrl-C + restart, or splitting
 work across multiple --sigma/--tau calls (even on different machines, then
@@ -82,60 +101,99 @@ def _worker_init():
         os.environ[var] = "1"
 
 
-def _run_one_worker(tau, sigma, seed, n_epochs):
+def _run_one_worker(tau, sigma, seed, n_epochs, dataset="mackey_glass"):
     from train_monolith_qae import run_one  # lazy: see _worker_init's docstring
     t0 = time.time()
-    row = run_one(tau, sigma, seed, n_epochs)
+    row = run_one(tau, sigma, seed, n_epochs, dataset=dataset)
     row["elapsed_sec"] = round(time.time() - t0, 1)
     return row
+
+
+def _row_key(row):
+    """Resume key. Rows written before the dataset flag existed have no
+    'dataset' field and are, by construction, Mackey-Glass - treat them as
+    such so the 30 existing MG rows are still recognised as done and never
+    recomputed."""
+    return (row.get("dataset", "mackey_glass"), row.get("tau"), row["sigma"],
+            row["seed"], row["n_epochs"])
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true", help="1 seed, 20 epochs, smoke test")
+    ap.add_argument("--dataset", default="mackey_glass",
+                     help="mackey_glass (default, sweeps --tau) or a real-world "
+                          "series: energy, finance. For real-world series --tau "
+                          "is ignored (recorded as null in the results).")
     ap.add_argument("--tau", type=int, choices=[17, 30], default=None)
     ap.add_argument("--sigma", type=float, default=None)
+    ap.add_argument("--sigmas", default=None,
+                     help="comma-separated noise levels, e.g. '0,0.1,0.15' (overrides --sigma); "
+                          "one call runs all missing jobs in a single worker pool")
+    ap.add_argument("--seeds", default=None,
+                     help="comma-separated seeds, e.g. '2023,2024'. Default: "
+                          f"{','.join(str(s) for s in SEEDS_DEFAULT)}")
     ap.add_argument("--workers", type=int, default=1,
                      help="how many runs to compute concurrently (separate processes). "
                           "Keep this comfortably below the machine's free core count.")
     args = ap.parse_args()
 
-    taus = [args.tau] if args.tau else TAUS_DEFAULT
-    sigmas = [args.sigma] if args.sigma else SIGMAS_DEFAULT
-    seeds = [2025] if args.quick else SEEDS_DEFAULT
+    # Mackey-Glass is the only dataset with a tau; for the real-world series a
+    # single [None] "tau" keeps the loop below dataset-agnostic.
+    if args.dataset == "mackey_glass":
+        taus = [args.tau] if args.tau is not None else TAUS_DEFAULT
+    else:
+        if args.tau is not None:
+            print(f"note: --tau is ignored for dataset={args.dataset}")
+        taus = [None]
+    # `is not None`, not truthiness: --sigma 0 is a legitimate request (it
+    # measures the reconstruction floor on the clean series) and `if args.sigma`
+    # would silently discard it and launch the whole default 3-sigma sweep.
+    if args.sigmas:
+        sigmas = [float(x) for x in args.sigmas.split(",") if x.strip()]
+    else:
+        sigmas = [args.sigma] if args.sigma is not None else SIGMAS_DEFAULT
+    if args.seeds:
+        seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
+    else:
+        seeds = [2025] if args.quick else SEEDS_DEFAULT
     n_epochs = 20 if args.quick else N_EPOCHS_DEFAULT
 
     os.makedirs("results_qml", exist_ok=True)
     results = json.load(open(OUT_PATH)) if os.path.exists(OUT_PATH) else []
-    done_keys = {(r["tau"], r["sigma"], r["seed"], r["n_epochs"]) for r in results}
+    done_keys = {_row_key(r) for r in results}
 
     todo = [(tau, sigma, seed) for tau in taus for sigma in sigmas for seed in seeds
-            if (tau, sigma, seed, n_epochs) not in done_keys]
+            if (args.dataset, tau, sigma, seed, n_epochs) not in done_keys]
 
-    print(f"Grid: tau={taus} sigma={sigmas} seeds={seeds} n_epochs={n_epochs} workers={args.workers}")
+    print(f"Grid: dataset={args.dataset} tau={taus} sigma={sigmas} seeds={seeds} "
+          f"n_epochs={n_epochs} workers={args.workers}")
     print(f"({len(taus) * len(sigmas) * len(seeds)} combination(s) requested, "
           f"{len(done_keys)} already done overall, {len(todo)} to do now)\n")
 
+    def _log(row):
+        tau_s = "  -" if row.get("tau") is None else f"{row['tau']:3d}"
+        print(f"{row.get('dataset', 'mackey_glass'):13s} tau={tau_s} sigma={row['sigma']:.2f} "
+              f"seed={row['seed']} n_weights={row['n_weights']} "
+              f"Delta_test={row['delta_test_pct']:+.2f}% ({row['elapsed_sec']:.0f}s)", flush=True)
+
     if args.workers <= 1:
         for tau, sigma, seed in todo:
-            row = _run_one_worker(tau, sigma, seed, n_epochs)
+            row = _run_one_worker(tau, sigma, seed, n_epochs, args.dataset)
             results.append(row)
             with open(OUT_PATH, "w") as f:
                 json.dump(results, f, indent=2)
-            print(f"tau={tau} sigma={sigma:.1f} seed={seed} n_weights={row['n_weights']} "
-                  f"Delta_test={row['delta_test_pct']:+.2f}% ({row['elapsed_sec']:.0f}s)", flush=True)
+            _log(row)
     else:
         with ProcessPoolExecutor(max_workers=args.workers, initializer=_worker_init) as pool:
-            futures = {pool.submit(_run_one_worker, tau, sigma, seed, n_epochs): (tau, sigma, seed)
-                       for tau, sigma, seed in todo}
+            futures = {pool.submit(_run_one_worker, tau, sigma, seed, n_epochs, args.dataset):
+                       (tau, sigma, seed) for tau, sigma, seed in todo}
             for fut in as_completed(futures):
                 row = fut.result()
                 results.append(row)
                 with open(OUT_PATH, "w") as f:
                     json.dump(results, f, indent=2)
-                print(f"tau={row['tau']} sigma={row['sigma']:.1f} seed={row['seed']} "
-                      f"n_weights={row['n_weights']} Delta_test={row['delta_test_pct']:+.2f}% "
-                      f"({row['elapsed_sec']:.0f}s)", flush=True)
+                _log(row)
 
     print(f"\nDone. {len(results)} row(s) in {OUT_PATH}")
 

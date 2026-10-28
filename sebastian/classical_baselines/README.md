@@ -1,3 +1,11 @@
+# Current journal-extension benchmark
+
+Use `bash run_all_classical.sh` for all four series and ten noise levels. Canonical tuned results are selected by `../analysis/aggregate_comparison.py`; the older grid summarizer below describes untuned reference runs only.
+
+See [the package README](../README.md) for the current reproduction commands,
+canonical filtering, undefined zero-noise Delta, and training-noise limitations.
+The earlier usage notes below are retained as historical context.
+
 # project_b_classical — classical AE baselines for the CMES extension
 
 Classical (PyTorch) denoising-autoencoder baselines for the CMES extension of the

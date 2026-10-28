@@ -1,73 +1,103 @@
-# Sebastian's extension package
+# QAE journal extension: code and recorded results
 
-This directory is an isolated, reproducible extension of the QAE architecture
-study.  It deliberately does not modify the shared implementation elsewhere in
-the repository.
+This standalone package contains the current journal-extension experiments,
+including the four-series noise ablation and the reconstruction-error analysis.
+The raw experiment files were synchronized on 28 October 2026. No new training
+was performed during that synchronization, and the recorded MSEs and positive-noise
+Delta values were not modified.
 
-## Scope
+## Relationship to earlier manuscripts
 
-The package contains three distinct experimental tracks:
+The journal extension is defined relative to the QUANTICS 2026 conference
+paper, which primarily compared QAE architectures. Classical baselines,
+additional series, and reconstruction-error analysis were already included
+in the earlier CMES journal draft; they are not newly introduced relative to
+that draft. The current package supplies the later, denser noise grid and
+zero-noise measurements used by the current journal manuscript, together with
+the underlying code and raw results. This synchronization does not imply that
+a previous journal draft was published.
 
-1. `pennylane_monolith/` reproduces the fresh PennyLane Monolith QAE sweep on
-   Mackey--Glass series with $\tau \in \{17, 30\}$ and
-   $\sigma \in \{0.1, 0.2, 0.3\}$.
-2. `classical_baselines/` contains parameter-matched classical autoencoders
-   evaluated with the same final MSE-based $\Delta_{test}$ protocol.  The
-   TinyMLP has 142 parameters and the Monolith QAE has 144 parameters.
-3. `qiskit_validation/` contains the independent Qiskit/Aer QuTSAE validation
-   and its MLP-AE/LSTM-AE baselines on four time series.
+## Experimental tracks
 
-The first two tracks form the primary, directly matched benchmark.  The Qiskit
-track has different preprocessing, windowing and metrics, and must therefore
-be reported separately rather than numerically pooled with the primary result.
+- `pennylane_monolith/`: six-sample windows, four latent qubits, four circuit
+  layers, 144 parameters, 300 epochs. Four series: Mackey--Glass at tau 17 and
+  tau 30, Victoria electricity demand, and AAPL closing prices. Ten noise
+  levels: 0 and 0.10 through 0.50 in steps of 0.05; seven seeds, 2023--2029.
+  The raw file contains 280 canonical runs and two 20-epoch smoke runs;
+  aggregation excludes the smoke runs.
+- `classical_baselines/`: TinyMLP (142 parameters), MLP-AE, and LSTM-AE;
+  training-partition hyperparameter search at sigma=0.2 and final evaluation
+  at the same ten noise levels. Search records, selected configurations, raw
+  final runs, and the older untuned baseline are included. Raw final logs
+  also contain earlier configurations and exploratory seeds; canonical
+  aggregation selects the recorded winning configuration and seeds 2023--2029.
+- `qiskit_validation/`: independent QuTSAE validation, four series and five
+  seeds. Its encoding, preprocessing, training objective, and metrics differ;
+  do not pool these results with the matched PennyLane benchmark. Its experiment
+  code and per-seed results were retained from the earlier package.
 
-## Contents
+## Reproduce the recorded analysis
 
-- `classical_baselines/`: source code, raw input data, final raw results and
-  summaries for the MSE-based baseline sweep.
-- `pennylane_monolith/`: source code, utility functions, final raw results and
-  summaries for the PennyLane sweep.
-- `qiskit_validation/`: Qiskit/Aer source code, raw input data and complete
-  per-seed final results.  The obsolete `_summary.*` files are intentionally
-  absent; `aggregate_results.py` rebuilds them directly from the 20 per-seed
-  JSON files.
-- `analysis/generate_extension_figures.py`: deterministic generator for the
-  two figures used by the extension.
-- `figures/`: generated PNG and PDF figures.
-
-The runner scripts retain their native output locations: `results_b/` for the
-classical track, `results_qml/` for the PennyLane track, and `results/` for the
-Qiskit/Aer track.
-
-## Reproducing the reported summaries
-
-Each experiment has its own `requirements.txt`, because PennyLane and the
-Qiskit/Aer GPU stack have separate environment constraints.  From the relevant
-subdirectory:
+Use an existing Python 3.11+ environment with numpy, pandas and matplotlib.
+The unchanged per-track `requirements.txt` files describe the training stacks;
+no training framework is required to aggregate the stored JSON files.
+From `sebastian/`:
 
 ```bash
-python -m pip install -r requirements.txt
-python summarize_b.py                 # classical_baselines
-python summarize_qml.py               # pennylane_monolith
-python aggregate_results.py            # qiskit_validation
-```
-
-The expensive runners are `run_classical_grid_b.py`, `sweep_monolith_qae.py`,
-and `run_full_grid_gpu.py`, respectively.  They are resumable and preserve
-per-run JSON outputs.
-
-To regenerate the publication figures, install `numpy` and `matplotlib` in an
-environment that can read CSV/JSON files, then run from this directory:
-
-```bash
+python analysis/check_seed_counts.py
+python analysis/verify_tracks_match.py
+python analysis/verify_results.py
+python analysis/aggregate_comparison.py
+python analysis/analyse_qae_floor.py > results_tables/qae_floor_analysis.txt
+python pennylane_monolith/summarize_qml.py
 python analysis/generate_extension_figures.py
 ```
 
-## Reporting constraint
+`verify_tracks_match.py` checks the real-world loaders and, when PennyLane is
+available, the Mackey--Glass training generator. `verify_results.py` additionally
+checks the numerical generator bodies without importing the training frameworks.
+It verifies raw metrics, canonical seed uniqueness, aggregation, input-series
+agreement, and the current comparison CSV. Welch tests run when scipy is available.
+Figures are rebuilt as PNG and PDF under `figures/`; all paths are package-local.
+The canonical comparison table covers 36 series/noise cells per model, with
+seven runs per cell. Derived summaries use population SD (`ddof=0`), matching
+this manuscript; Welch tests use sample variances.
 
-The primary matched sweep shows that the TinyMLP achieves a higher mean
-$\Delta_{test}$ in all six matched $(\tau, \sigma)$ settings.  The independent
-Qiskit/Aer validation is heterogeneous across datasets.  These artifacts
-support a qualified architectural conclusion inside the investigated QAE
-family; they do not support a general claim of quantum superiority over
-classical autoencoders.
+## Reproduce training
+
+After setting up the appropriate per-track environments, run the following from
+`sebastian/`. Both scripts resume missing configurations; do not run concurrent
+writers against the same raw JSON file.
+
+```bash
+PY=/path/to/pennylane-env/bin/python WORKERS=4 bash pennylane_monolith/run_all_qml.sh
+PY=/path/to/torch-env/bin/python WORKERS=4 bash classical_baselines/run_all_classical.sh
+```
+
+These commands may be expensive. Analysis-only commands above do not train models.
+The runners preserve the recorded protocol; synchronization does not rerun training.
+
+## Interpretation and known limitations
+
+- Delta = 100 * (1 - MSE_reconstructed / MSE_noisy), evaluated after averaging
+  overlapping reconstructions. Delta is undefined at sigma=0. Some historical
+  QAE rows contain enormous negative placeholder percentages there, and other
+  rows contain a zero sentinel. The raw logs are preserved for provenance;
+  comparison tables and Delta plots exclude zero noise, and summaries mark
+  it undefined. The valid zero-noise MSE remains in the affine fit.
+- The fitted intercept phi is distinct from measured zero-noise reconstruction
+  error. Models are trained separately at each noise level. The affine fit and
+  its break-even estimates describe this protocol, not a proven irreducible
+  architectural bound. PCA residual variance is exploratory, not a four-qubit
+  capacity bound or an independently validated predictor.
+- Scaling uses the full series and neighboring train/test windows overlap.
+  This is a controlled within-series experiment, not a purged forecasting test.
+- Seven seeds characterize training variability on one fixed test-noise draw;
+  they do not provide seven independent test series or test-noise realizations.
+- The JSON logs do not contain trained weights or per-sample predictions.
+  Aggregation is reproducible from these logs; independently checking the
+  model-to-MSE step requires retraining or separately supplied checkpoints.
+
+`results_tables/raw_result_manifest.json` records SHA-256 hashes and row counts
+of the synchronized raw JSON files. Source logs are preserved including their
+noncanonical runs, which makes the selection applied by the aggregator auditable.

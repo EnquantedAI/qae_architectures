@@ -48,49 +48,10 @@ def mean_and_std(values: list[float]) -> tuple[float, float]:
 
 
 def make_primary_benchmark_figure() -> None:
-    """Plot the parameter-matched TinyMLP versus PennyLane Monolith sweep."""
-    classical_rows = read_csv(CLASSICAL_SUMMARY)
-    qml_rows = read_csv(QML_SUMMARY)
+    """Plot the current four-series benchmark from canonical comparison rows."""
+    from plot_matched_benchmark import main as plot_matched
 
-    classical = {
-        (int(row["dataset"].removeprefix("mackey_glass_tau")), float(row["sigma"])): row
-        for row in classical_rows
-        if row["model"] == "TinyMLP" and row["dataset"].startswith("mackey_glass_tau")
-    }
-    qml = {(int(row["tau"]), float(row["sigma"])): row for row in qml_rows}
-
-    sigmas = [0.1, 0.2, 0.3]
-    fig, axes = plt.subplots(1, 2, figsize=(8.0, 3.8), sharey=True, layout="constrained")
-
-    for axis, tau in zip(axes, (17, 30), strict=True):
-        classical_mean = [float(classical[tau, sigma]["delta_test_pct_mean"]) for sigma in sigmas]
-        classical_std = [float(classical[tau, sigma]["delta_test_pct_std"]) for sigma in sigmas]
-        qml_mean = [float(qml[tau, sigma]["delta_test_pct_mean"]) for sigma in sigmas]
-        qml_std = [float(qml[tau, sigma]["delta_test_pct_std"]) for sigma in sigmas]
-
-        axis.errorbar(
-            sigmas, classical_mean, yerr=classical_std, marker="o", capsize=3,
-            color=COLORS["TinyMLP"], label="TinyMLP (142 parameters)",
-        )
-        axis.errorbar(
-            sigmas, qml_mean, yerr=qml_std, marker="s", capsize=3,
-            color=COLORS["Monolith QAE"], label="Monolith QAE (144 parameters)",
-        )
-        axis.set_title(rf"Mackey--Glass $\tau={tau}$")
-        axis.set_xlabel(r"Noise level $\sigma$")
-        axis.set_xticks(sigmas)
-        axis.set_xlim(0.08, 0.32)
-        axis.grid(axis="y", alpha=0.25)
-
-    axes[0].set_ylabel(r"Denoising improvement $\Delta_{test}$ (\%)")
-    axes[0].set_ylim(0, 100)
-    handles, labels = axes[0].get_legend_handles_labels()
-    axes[0].legend(handles, labels, loc="lower right", frameon=True)
-
-    FIGURES_DIR.mkdir(exist_ok=True)
-    for extension in ("png", "pdf"):
-        fig.savefig(FIGURES_DIR / f"matched_pennylane_classical_benchmark.{extension}", dpi=300)
-    plt.close(fig)
+    plot_matched()
 
 
 def make_qiskit_validation_figure() -> None:

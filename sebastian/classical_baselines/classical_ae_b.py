@@ -169,6 +169,32 @@ def default_device():
 
 TEST_SEED_FIXED = 99123  # matches the real repo's eval convention exactly
 
+# Range the noise amplitude is scaled by: sigma * (hi - lo).
+#
+# FIXED 2026-09-08. This used to default to the SERIES' OWN min/max, which made
+# the classical track inject less noise than the quantum track on Mackey-Glass
+# and therefore broke the like-for-like comparison the whole table rests on:
+#
+#   * All series are normalised to [0,1], but Mackey-Glass is normalised on the
+#     full 1200-point series and only THEN downsampled to 200 points, so those
+#     200 points span just 0.9565 (tau=17) / 0.9835 (tau=30) - not 1.0.
+#   * The quantum track scales by the full ENCODER range (create_sw_tens is
+#     called with range_low/range_high = the encoding limits), i.e. span 1.0.
+#   * Measured consequence at sigma=0.1: eval-noise MSE 0.01204448 (classical)
+#     vs 0.01316524 (quantum) on tau=17 - a ratio of 0.9149, exactly
+#     0.9565^2; and 0.9673 = 0.9835^2 on tau=30. The classical model was
+#     facing 8.5% / 3.3% less noise power, which biased the comparison in its
+#     favour on precisely the series the paper leads with.
+#   * energy and finance are normalised to exactly [0,1], so for them the two
+#     conventions already agreed bit-for-bit and this change is a no-op.
+#
+# Fixing it here rather than in add_noise_to_series() keeps that function a
+# faithful mirror of qae_utils/Tools.py::ts_add_noise (which takes the range as
+# an argument); what was wrong was the CALLER's choice of range, not the noise
+# model. Re-run the Mackey-Glass rows after changing this - see
+# README_rozszerzenie_2026-09-08.md.
+NOISE_RANGE = (0.0, 1.0)
+
 
 def add_noise_to_series(series, sigma, seed, lo=None, hi=None, clip=False, noise_type="normal"):
     """Matches qae_utils/Tools.py::ts_add_noise exactly (normal noise,
@@ -215,14 +241,16 @@ def train_dynamic_noise(model, series, sigma, window, stride, train_frac=0.75, e
     n = Ytr.shape[0]
 
     # fixed test noise: whole series noised once with test_seed_fixed, then windowed
-    noisy_series_test = add_noise_to_series(series, sigma, seed=test_seed_fixed)
+    noisy_series_test = add_noise_to_series(series, sigma, seed=test_seed_fixed,
+                                            lo=NOISE_RANGE[0], hi=NOISE_RANGE[1])
     Xte = torch.tensor(make_windows(noisy_series_test, window, stride)[n_train:],
                         dtype=torch.float32, device=device)
 
     train_losses, test_losses = [], []
     for epoch in range(epochs):
         # epoch-specific train noise: whole series, fresh seed each epoch
-        noisy_series_ep = add_noise_to_series(series, sigma, seed=seed * 100_000 + epoch)
+        noisy_series_ep = add_noise_to_series(series, sigma, seed=seed * 100_000 + epoch,
+                                              lo=NOISE_RANGE[0], hi=NOISE_RANGE[1])
         Xtr = torch.tensor(make_windows(noisy_series_ep, window, stride)[:n_train],
                             dtype=torch.float32, device=device)
 
@@ -263,7 +291,8 @@ def eval_fixed_noise(model, series, sigma, window, stride, train_frac=0.75,
     n_train = int(round(len(clean_windows) * train_frac))
     test_clean_w = clean_windows[n_train:]
 
-    noisy_series = add_noise_to_series(series, sigma, seed=seed)
+    noisy_series = add_noise_to_series(series, sigma, seed=seed,
+                                       lo=NOISE_RANGE[0], hi=NOISE_RANGE[1])
     noisy_windows = make_windows(noisy_series, window, stride)
     test_noisy_w = noisy_windows[n_train:]
 

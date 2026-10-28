@@ -33,7 +33,7 @@ from metrics_b import delta_improvement, window_metrics
 
 WINDOW, STRIDE = 6, 2
 LATENT = 4  # matches QUANTICS 2026 Table 2's 4/2 latent-trash split (6 qubits)
-SEEDS_DEFAULT = [2023, 2024, 2025, 2026, 2027]
+SEEDS_DEFAULT = [2023, 2024, 2025, 2026, 2027, 2028, 2029]
 SIGMAS_DEFAULT = [0.1, 0.2, 0.3]  # 0.2 = their value; 0.1/0.3 = reviewer-requested ablation
 EPOCHS = 300
 

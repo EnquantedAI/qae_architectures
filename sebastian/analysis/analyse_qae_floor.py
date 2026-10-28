@@ -1,36 +1,13 @@
 """
-Why the QAE goes NEGATIVE at low noise: its own reconstruction floor.
+Fit an empirical affine model of QAE reconstruction error versus noise power.
 
-The observation this explains
-----------------------------
-On `energy` at sigma=0.1 the Monolith QAE scores Delta_test = -75.6 +/- 15.4
-(all 5 seeds negative, -57 to -100). That is not a failed run and not an
-artefact: it is what the metric must report when the model's own
-reconstruction error exceeds the noise it was asked to remove.
+The intercept is a regression coefficient, not the measured zero-noise error
+or an established irreducible architectural limit. Models are trained
+separately at each sigma. Break-even estimates describe the recorded protocol.
+PCA residual variance is an exploratory linear-compressibility descriptor;
+a four-qubit register is not equivalent to four classical PCA coordinates.
 
-The model
----------
-Split the QAE's test error into a part that does not depend on the noise (its
-representational floor - the error it would make reconstructing the CLEAN
-series, caused by squeezing a 6-sample window through a 4-qubit latent) and a
-part proportional to the injected noise:
-
-    MSE_rec  =  floor  +  k * MSE_noise
-
-Delta_test = 100 * (1 - MSE_rec / MSE_noise) is then negative whenever
-MSE_noise < floor / (1 - k). Since MSE_noise scales as sigma^2, that defines a
-break-even noise level below which the architecture CANNOT help on that series,
-no matter how well it trains.
-
-Reading the result
-------------------
-The floor is a property of the (architecture, series) pair, not of the noise:
-a series a 4-qubit latent can represent well has a low floor and stays useful
-down to low noise; a series it cannot represent has a high floor and is
-harmful below the break-even point. This is an architecture-vs-data statement
-of exactly the kind the paper is about - not a claim about quantum advantage.
-
-    python3 analyse_qae_floor.py
+Run from the package root: python analysis/analyse_qae_floor.py
 """
 
 import json
@@ -39,8 +16,8 @@ import statistics as st
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PARENT = os.path.dirname(HERE)  # sebastian/ -- this script lives in sebastian/analysis/
-QML_ROWS = os.path.join(PARENT, "pennylane_monolith", "results_qml", "monolith_qml.json")
+ROOT = os.path.dirname(HERE)
+QML_ROWS = os.path.join(ROOT, "pennylane_monolith", "results_qml", "monolith_qml.json")
 
 # MSE of the fixed evaluation noise realisation at sigma=0.2, used to convert a
 # break-even MSE back into a sigma (noise power scales as sigma^2).
@@ -95,12 +72,13 @@ def main():
         rs = groups[key]
         mse_noise = rs[0]["mse_test_noise"]
         mse_rec = st.mean(r["mse_test_recovered"] for r in rs)
-        delta = st.mean(r["delta_test_pct"] for r in rs)
+        delta = st.mean(r["delta_test_pct"] for r in rs) if sigma > 0 else None
+        delta_text = f"{delta:+9.2f}" if delta is not None else "undefined"
         per_series.setdefault(lab, []).append((mse_noise, mse_rec))
-        print(f"{lab:12s} {sigma:5.1f} {len(rs):3d} {mse_noise:10.5f} "
-              f"{mse_rec:10.5f} {delta:+9.2f}")
+        print(f"{lab:12s} {sigma:5.2f} {len(rs):3d} {mse_noise:10.5f} "
+              f"{mse_rec:10.5f} {delta_text:>9s}")
 
-    print("\nFit  MSE_rec = floor + k * MSE_noise   (floor = error on the clean series)\n")
+    print("\nFit  MSE_rec = floor + k * MSE_noise   (floor = fitted intercept; not the zero-noise measurement)\n")
     print(f"{'series':12s} {'floor':>9s} {'k':>7s} {'break-even sigma':>18s}")
     for lab, pts in sorted(per_series.items()):
         fit = fit_floor(pts)
@@ -115,28 +93,28 @@ def main():
         sigma_cross = 0.2 * (mse_cross / MSE_NOISE_AT_02) ** 0.5
         print(f"{lab:12s} {floor:9.5f} {k:7.3f} {sigma_cross:18.3f}")
 
-    print("\nBelow its break-even sigma the QAE adds more error than it removes on\n"
-          "that series - Delta_test is negative by construction, not by failure.\n"
-          "A direct test of the fitted floor: train at sigma=0 and measure the\n"
-          "reconstruction error on the clean series; it should land near 'floor'.")
+    print("\nBreak-even values are empirical estimates for this training/evaluation\n"
+          "protocol, conditional on an adequate affine fit and k < 1. They do\n"
+          "not prove a training-independent limitation. Delta is undefined at sigma=0.")
+    print("\nDirect zero-noise reconstruction error versus fitted intercept:")
+    for lab, pts in sorted(per_series.items()):
+        clean = [y for x, y in pts if x == 0]
+        fit = fit_floor(pts)
+        if clean and fit is not None:
+            print(f"{lab:12s} clean MSE={clean[0]:.8f}  fitted intercept={fit[0]:.8f}")
 
     compressibility(per_series)
 
 
 def compressibility(per_series):
-    """Independent, model-free predictor of the floor.
+    """Compare linear PCA compressibility with fitted intercepts.
 
-    The floor is meant to be 'what a 4-dimensional latent cannot represent'.
-    If that reading is right, a plain PCA of the CLEAN windows should predict
-    it: the variance the first n_latent principal components fail to capture
-    is the information the latent must discard, whatever the encoding.
-
-    This needs no quantum run at all - it is computable from the series alone,
-    which is what makes it useful as a design rule rather than a post-hoc
-    explanation."""
+    This is exploratory: four series, one with substantial leverage. Four
+    principal components do not represent a four-qubit information bound.
+    """
     try:
         import numpy as np
-        sys.path.insert(0, os.path.join(PARENT, "classical_baselines"))
+        sys.path.insert(0, os.path.join(ROOT, "classical_baselines"))
         import datasets_b as db
     except Exception as exc:
         print(f"\n(skipping compressibility check: {type(exc).__name__}: {exc})")
@@ -144,7 +122,7 @@ def compressibility(per_series):
 
     name_map = {"MG tau=17": "mackey_glass_tau17", "MG tau=30": "mackey_glass_tau30",
                 "energy": "energy", "finance": "finance"}
-    print("\n\nWindow compressibility (PCA of the clean windows, W=6, 4 latent dims)\n")
+    print("\n\nWindow compressibility (PCA of the clean windows, W=6, 4 principal components)\n")
     print(f"{'series':12s} {'var kept by 4 PCs':>18s} {'residual':>10s} {'fitted floor':>13s}")
     resid, floors = [], []
     for lab in sorted(per_series):
@@ -166,7 +144,7 @@ def compressibility(per_series):
         r = float(np.corrcoef(resid, floors)[0, 1])
         print(f"\nPearson r(residual variance, fitted floor) = {r:.4f}  (n={len(resid)} series)")
         print("Caveat: n is tiny and one series (energy) dominates the spread, so treat\n"
-              "this as a consistency check on the interpretation, not as an estimated law.")
+              "this as an exploratory association, not as a validated predictor or a law.")
 
 
 if __name__ == "__main__":

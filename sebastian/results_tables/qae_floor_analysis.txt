@@ -1,0 +1,74 @@
+QAE test error vs noise level (mean over seeds)
+
+series       sigma   n  MSE_noise    MSE_rec    Delta%
+MG tau=17     0.00   7    0.00000    0.00619 undefined
+MG tau=17     0.10   7    0.01317    0.00912    +30.71
+MG tau=17     0.15   7    0.02962    0.01186    +59.95
+MG tau=17     0.20   7    0.05266    0.01638    +68.90
+MG tau=17     0.25   7    0.08228    0.01925    +76.60
+MG tau=17     0.30   7    0.11849    0.02424    +79.54
+MG tau=17     0.35   7    0.16127    0.02988    +81.47
+MG tau=17     0.40   7    0.21064    0.03264    +84.50
+MG tau=17     0.45   7    0.26660    0.04121    +84.54
+MG tau=17     0.50   7    0.32913    0.04983    +84.86
+MG tau=30     0.00   7    0.00000    0.00332 undefined
+MG tau=30     0.10   7    0.01317    0.00764    +42.00
+MG tau=30     0.15   7    0.02962    0.01184    +60.02
+MG tau=30     0.20   7    0.05266    0.01795    +65.91
+MG tau=30     0.25   7    0.08228    0.02381    +71.06
+MG tau=30     0.30   7    0.11849    0.03091    +73.91
+MG tau=30     0.35   7    0.16127    0.03817    +76.33
+MG tau=30     0.40   7    0.21064    0.04513    +78.57
+MG tau=30     0.45   7    0.26660    0.05232    +80.37
+MG tau=30     0.50   7    0.32913    0.06376    +80.63
+energy        0.00   7    0.00000    0.01477 undefined
+energy        0.10   7    0.01317    0.02309    -75.38
+energy        0.15   7    0.02962    0.02758     +6.90
+energy        0.20   7    0.05266    0.03624    +31.19
+energy        0.25   7    0.08228    0.04390    +46.65
+energy        0.30   7    0.11849    0.05575    +52.95
+energy        0.35   7    0.16127    0.06804    +57.81
+energy        0.40   7    0.21064    0.08175    +61.19
+energy        0.45   7    0.26660    0.09092    +65.90
+energy        0.50   7    0.32913    0.10827    +67.10
+finance       0.00   7    0.00000    0.00077 undefined
+finance       0.10   7    0.01317    0.00379    +71.25
+finance       0.15   7    0.02962    0.00664    +77.59
+finance       0.20   7    0.05266    0.01104    +79.04
+finance       0.25   7    0.08228    0.01496    +81.81
+finance       0.30   7    0.11849    0.01898    +83.98
+finance       0.35   7    0.16127    0.02587    +83.96
+finance       0.40   7    0.21064    0.02803    +86.69
+finance       0.45   7    0.26660    0.03099    +88.38
+finance       0.50   7    0.32913    0.03233    +90.18
+
+Fit  MSE_rec = floor + k * MSE_noise   (floor = fitted intercept; not the zero-noise measurement)
+
+series           floor       k   break-even sigma
+MG tau=17      0.00812   0.126              0.084
+MG tau=30      0.00706   0.177              0.081
+energy         0.02002   0.277              0.145
+finance        0.00481   0.099              0.064
+
+Break-even values are empirical estimates for this training/evaluation
+protocol, conditional on an adequate affine fit and k < 1. They do
+not prove a training-independent limitation. Delta is undefined at sigma=0.
+
+Direct zero-noise reconstruction error versus fitted intercept:
+MG tau=17    clean MSE=0.00618939  fitted intercept=0.00812251
+MG tau=30    clean MSE=0.00332215  fitted intercept=0.00705854
+energy       clean MSE=0.01476704  fitted intercept=0.02002382
+finance      clean MSE=0.00077396  fitted intercept=0.00480789
+
+
+Window compressibility (PCA of the clean windows, W=6, 4 principal components)
+
+series        var kept by 4 PCs   residual  fitted floor
+MG tau=17               98.901%     1.099%       0.00812
+MG tau=30               99.376%     0.624%       0.00706
+energy                  94.401%     5.599%       0.02002
+finance                 99.246%     0.754%       0.00481
+
+Pearson r(residual variance, fitted floor) = 0.9851  (n=4 series)
+Caveat: n is tiny and one series (energy) dominates the spread, so treat
+this as an exploratory association, not as a validated predictor or a law.

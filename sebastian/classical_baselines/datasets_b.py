@@ -58,7 +58,7 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 def mackey_glass_quantics(tau, length=1200, beta=0.17, gamma=0.1, n=10, x0=1.2):
     """Forward-Euler Mackey-Glass recursion, matching the real QUANTICS 2026
     training notebook's own `mackey_glass()` function EXACTLY (verified
-    numerically against `project_b_qml/train_monolith_qae.py::mackey_glass`,
+    numerically against `experiments/qml/train_monolith_qae.py::mackey_glass`,
     which was extracted near-verbatim from the real notebook):
 
         dx/dt = beta*x(t-tau) / (1 + x(t-tau)**n) - gamma*x(t)   [theta=1]

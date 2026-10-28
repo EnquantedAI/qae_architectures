@@ -3,9 +3,9 @@ Merge the classical and quantum tracks into the paper's comparison tables.
 
 Reads
 -----
-  ../pennylane_monolith/results_qml/monolith_qml.json          quantum (Monolith QAE)
-  ../classical_baselines/results_b/classical_tuned_final.json   classical, tuned
-  ../classical_baselines/results_b/classical_grid_b.json        classical, untuned
+  pennylane_monolith/results_qml/monolith_qml.json          quantum (Monolith QAE)
+  classical_baselines/results_b/classical_tuned_final.json   classical, tuned
+  classical_baselines/results_b/classical_grid_b.json        classical, untuned
 
 Writes (to ../results_tables/)
 --------------------------
@@ -36,14 +36,22 @@ import sys
 # included, since they are recomputed here from the raw JSON) to the sample SD.
 DDOF = 0
 
+# The canonical classical Stage-2 seed set (run_classical_tuned_b.py's
+# FINAL_SEEDS). One cell - energy/TinyMLP at sigma=0.1 - was found carrying
+# two extra seeds (2030, 2031) alongside the canonical seven, from an
+# untracked exploratory run that got appended to the same results file.
+# Filtering to this set keeps every table cell at the same n and matches
+# what the table captions claim ("mean over seven seeds").
+CLS_FINAL_SEEDS = {2023, 2024, 2025, 2026, 2027, 2028, 2029}
+
 HERE = os.path.dirname(os.path.abspath(__file__))
-PARENT = os.path.dirname(HERE)  # sebastian/ -- this script lives in sebastian/analysis/
-QML_ROWS = os.path.join(PARENT, "pennylane_monolith", "results_qml", "monolith_qml.json")
-CLS_TUNED = os.path.join(PARENT, "classical_baselines", "results_b", "classical_tuned_final.json")
-CLS_SELECTED = os.path.join(PARENT, "classical_baselines", "results_b", "classical_tuned_selected.json")
-CLS_SEARCH = os.path.join(PARENT, "classical_baselines", "results_b", "classical_tuned_search.json")
-CLS_UNTUNED = os.path.join(PARENT, "classical_baselines", "results_b", "classical_grid_b.json")
-OUT_DIR = os.path.join(PARENT, "results_tables")
+ROOT = os.path.dirname(HERE)
+QML_ROWS = os.path.join(ROOT, "pennylane_monolith", "results_qml", "monolith_qml.json")
+CLS_TUNED = os.path.join(ROOT, "classical_baselines", "results_b", "classical_tuned_final.json")
+CLS_SELECTED = os.path.join(ROOT, "classical_baselines", "results_b", "classical_tuned_selected.json")
+CLS_SEARCH = os.path.join(ROOT, "classical_baselines", "results_b", "classical_tuned_search.json")
+CLS_UNTUNED = os.path.join(ROOT, "classical_baselines", "results_b", "classical_grid_b.json")
+OUT_DIR = os.path.join(ROOT, "results_tables")
 
 MATCHED_MODEL = "TinyMLP"          # the ~142-parameter, QAE-matched baseline
 GENEROUS_MODELS = ["MLP-AE", "LSTM-AE"]
@@ -60,7 +68,7 @@ ORDER = ["mackey_glass_tau17", "mackey_glass_tau30", "energy", "finance", "beer"
 
 def _load(path):
     if not os.path.exists(path):
-        print(f"note: {os.path.relpath(path, HERE)} not found - skipping", file=sys.stderr)
+        print(f"note: {os.path.relpath(path, ROOT)} not found - skipping", file=sys.stderr)
         return []
     return json.load(open(path))
 
@@ -153,11 +161,27 @@ def collect():
         if r["n_epochs"] != max_epochs[ds]:
             drop(f"QAE/{ds}", f"n_epochs={r['n_epochs']} (canonical {max_epochs[ds]})")
             continue
+        if r["sigma"] == 0.0:
+            # Delta_test is undefined at sigma=0 (no noise to remove) - skip
+            # it here the same way plot_matched_benchmark.py does. The
+            # reconstruction floor at sigma=0 belongs to analyse_qae_floor.py
+            # (mse_test_recovered), not this Delta-based comparison table.
+            drop(f"QAE/{ds}", "sigma=0 (Delta undefined)")
+            continue
         put(ds, r["sigma"], "QAE", r["delta_test_pct"],
             {"n_params": r["n_weights"], "n_epochs": r["n_epochs"]})
 
     for r in _load(CLS_TUNED):
         if r.get("stage") != "final":
+            continue
+        if r["sigma"] == 0.0:
+            # same rationale as the QAE sigma=0 skip above: Delta is
+            # undefined there, metrics_b.py's delta_improvement returns a
+            # 0.0 sentinel (not a real "no improvement" measurement).
+            drop(f"{r['model']} (tuned)/{r['dataset']}", "sigma=0 (Delta undefined)")
+            continue
+        if r["seed"] not in CLS_FINAL_SEEDS:
+            drop(f"{r['model']} (tuned)/{r['dataset']}", f"seed={r['seed']} outside canonical FINAL_SEEDS")
             continue
         key = (r["dataset"], r["model"])
         cfg = json.dumps(r["config"], sort_keys=True)
@@ -173,6 +197,9 @@ def collect():
             r["delta_test_pct"], {"n_params": r["n_params"], "config": r["config"]})
 
     for r in _load(CLS_UNTUNED):
+        if r["sigma"] == 0.0:
+            drop(f"{r['model']} (untuned)/{r['dataset']}", "sigma=0 (Delta undefined)")
+            continue
         put(r["dataset"], r["sigma"], f"{r['model']} (untuned)",
             r["delta_test_pct"], {"n_params": r["n_params"]})
 
@@ -225,9 +252,9 @@ def write_summary(cells, path):
     lines += [header, "-" * len(header)]
     for ds, sigma in keys_in_order(cells):
         row = cells[(ds, sigma)]
-        lines.append(f"{ds:22s} {sigma:5.1f}  " +
+        lines.append(f"{ds:22s} {sigma:5.2f}  " +
                      "  ".join(f"{_fmt_txt(row.get(n)):^28s}" for n in names))
-    text = "\n".join(lines) + "\n"
+    text = "\n".join(line.rstrip() for line in lines) + "\n"
     open(path, "w").write(text)
     return text
 
@@ -239,7 +266,7 @@ def write_matched_tex(cells, path):
         row = cells[(ds, sigma)]
         if qae_name not in row and cls_name not in row:
             continue
-        body.append(f"\t\t\t{PRETTY.get(ds, ds)} & {sigma:.1f} & "
+        body.append(f"\t\t\t{PRETTY.get(ds, ds)} & {sigma:.2f} & "
                     f"${_fmt(row.get(cls_name))}$ & ${_fmt(row.get(qae_name))}$ \\\\")
     tex = "\n".join([
         r"% Auto-generated by aggregate_comparison.py - do not edit by hand.",
@@ -267,7 +294,7 @@ def write_generous_tex(cells, path):
         row = cells[(ds, sigma)]
         if not any(c in row for c in cols):
             continue
-        body.append(f"\t\t\t{PRETTY.get(ds, ds)} & {sigma:.1f} & " +
+        body.append(f"\t\t\t{PRETTY.get(ds, ds)} & {sigma:.2f} & " +
                     " & ".join(f"${_fmt(row.get(c))}$" for c in cols) + r" \\")
     tex = "\n".join([
         r"% Auto-generated by aggregate_comparison.py - do not edit by hand.",
@@ -290,7 +317,7 @@ def write_generous_tex(cells, path):
 def write_csv(cells, path):
     names = sorted({n for c in cells.values() for n in c})
     with open(path, "w", newline="") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["dataset", "sigma", "model", "n_seeds", "delta_test_mean", "delta_test_sd",
                     "n_params"])
         for ds, sigma in keys_in_order(cells):
@@ -342,7 +369,7 @@ def main():
     write_matched_tex(cells, os.path.join(OUT_DIR, "table_matched.tex"))
     write_generous_tex(cells, os.path.join(OUT_DIR, "table_generous.tex"))
     write_csv(cells, os.path.join(OUT_DIR, "comparison_rows.csv"))
-    print(f"Wrote tables to {os.path.relpath(OUT_DIR, HERE)}/")
+    print(f"Wrote tables to {os.path.relpath(OUT_DIR, ROOT)}/")
 
 
 if __name__ == "__main__":

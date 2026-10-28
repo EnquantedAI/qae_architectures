@@ -1,3 +1,11 @@
+# Current journal-extension grid
+
+Four series, ten noise levels including zero, and seven seeds. Use `bash run_all_qml.sh` for the full resumable grid; the default Python sweep retains its smaller historical defaults. The summary now separates datasets and excludes smoke runs.
+
+See [the package README](../README.md) for the current reproduction commands,
+canonical filtering, undefined zero-noise Delta, and training-noise limitations.
+The earlier usage notes below are retained as historical context.
+
 # project_b_qml — real Monolith QAE, PennyLane, for the noise-level ablation
 
 This is the first genuinely NEW thing to run on PennyLane for this project — everything

@@ -1,6 +1,6 @@
 """
-Cross-track consistency check: the classical track (classical_baselines) and
-the quantum track (pennylane_monolith) MUST see numerically identical series.
+Cross-track consistency check: the classical track (experiments/classical) and
+the quantum track (experiments/qml) MUST see numerically identical series.
 
 Why this file exists
 --------------------
@@ -26,9 +26,9 @@ import sys
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PARENT = os.path.dirname(HERE)
-CLASSICAL = os.path.join(PARENT, "classical_baselines")
-QUANTUM = os.path.join(PARENT, "pennylane_monolith")
+ROOT = os.path.dirname(HERE)
+CLASSICAL = os.path.join(ROOT, "classical_baselines")
+QUANTUM = os.path.join(ROOT, "pennylane_monolith")
 
 for path in (CLASSICAL, QUANTUM):
     if not os.path.isdir(path):
@@ -102,7 +102,7 @@ def main():
     if not HAVE_PENNYLANE:
         print(f"  SKIP - could not import train_monolith_qae ({type(_import_error).__name__}: "
               f"{_import_error}).\n       Install the pinned PennyLane stack "
-              f"(../pennylane_monolith/requirements.txt) to include this check.")
+              f"(pennylane_monolith/requirements.txt) to include this check.")
     else:
         for tau in TAUS:
             classical = datasets_b.series_mackey_glass(tau=tau)
