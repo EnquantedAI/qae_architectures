@@ -6,16 +6,15 @@ The raw experiment files were synchronized on 28 October 2026. No new training
 was performed during that synchronization, and the recorded MSEs and positive-noise
 Delta values were not modified.
 
-## Relationship to earlier manuscripts
+## Extension of the QUANTICS 2026 conference paper
 
-The journal extension is defined relative to the QUANTICS 2026 conference
-paper, which primarily compared QAE architectures. Classical baselines,
-additional series, and reconstruction-error analysis were already included
-in the earlier CMES journal draft; they are not newly introduced relative to
-that draft. The current package supplies the later, denser noise grid and
-zero-noise measurements used by the current journal manuscript, together with
-the underlying code and raw results. This synchronization does not imply that
-a previous journal draft was published.
+This package supports the journal extension of the QUANTICS 2026 conference
+paper, which primarily compared quantum autoencoder architectures. The extension
+adds parameter-matched classical autoencoders with training-partition
+hyperparameter selection, additional time series, a denser noise-level ablation
+including zero-noise reconstruction measurements, and an empirical analysis of
+reconstruction error and estimated break-even noise levels. The package contains
+the code, raw results, and derived artifacts supporting these additions.
 
 ## Experimental tracks
 
